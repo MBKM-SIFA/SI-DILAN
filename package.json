@@ -1,0 +1,22 @@
+{
+  "name": "si-dilan",
+  "version": "1.0.0",
+  "description": "An Information System used to facilitate hospital workers on advancing their educational career.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SI-DILAN/SI-DILAN.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SI-DILAN/SI-DILAN/issues"
+  },
+  "homepage": "https://github.com/SI-DILAN/SI-DILAN#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
