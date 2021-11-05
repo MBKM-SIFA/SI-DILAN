@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -9,9 +9,8 @@
     />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="/css/user/nav.css" />
-    <link rel="stylesheet" href="/css/user/beranda-user.css" />
+    <link rel="stylesheet" href="/css/user/pengajuanku.css" />
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="bootstrap-5.1.1-dist\js\bootstrap.bundle.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap"
       rel="stylesheet"
@@ -36,9 +35,8 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <title>Beranda</title>
-  </head>
-  <body>
+    <title>Pengajuanku</title>
+<body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark justify-content-between">
       <div class="title-beranda">
@@ -65,7 +63,7 @@
           <ul class="navbar-nav ml-auto">
             <a
               href="/view/user/beranda-user.html"
-              class="nav-item nav-link active"
+              class="nav-item nav-link"
               >Beranda</a
             >
             <a href="/view/user/tugas-belajar.html" class="nav-item nav-link"
@@ -74,7 +72,7 @@
             <a href="/view/user/izin-belajar.html" class="nav-item nav-link"
               >Izin Belajar</a
             >
-            <a href="/view/user/pengajuanku.html" class="nav-item nav-link"
+            <a href="/view/user/pengajuanku.html" class="nav-item nav-link active"
               >Pengajuanku</a
             >
           </ul>
@@ -147,12 +145,42 @@
       </div>
     </nav>
     <!-- Navbar -->
-
-    <!-- Main Content -->
     <main>
-      <h1 style="color: aliceblue">hehe</h1>
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <table class="table table-responsive-lg border-0">
+                    <thead>
+                        <tr>
+                        <th scope="col" class="text-center">No</th>
+                        <th scope="col" style="width: 300px;">Jenis Pengajuan</th>
+                        <th scope="col" class="text-center">Waktu Pengajuan</th>
+                        <th scope="col" class="text-center border-bottom">Status Pengajuan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="text-center">1</th>
+                            <td>Izin Belajar</td>
+                            <td class="text-center">11 Oktober 2021</td>
+                            <td class="d-flex justify-content-center border-0" style="height: 58.5px; border-bottom: 0.5px solid #dee2e6 !important;"><div class="status-diterima text-center">Diterima</div></td>
+                        </tr>
+                         <tr>
+                            <th scope="row" class="text-center">2</th>
+                            <td>Tugas Belajar</td>
+                            <td class="text-center">12 November 2021</td>
+                            <td class="d-flex justify-content-center border-0" style="height: 58.5px; border-bottom: 0.5px solid #dee2e6 !important;"><div class="status-ditolak text-center">Ditolak</div></td>
+                        </tr>
+                       <tr>
+                            <th scope="row" class="text-center">3</th>
+                            <td>Izin Belajar</td>
+                            <td class="text-center">21 Desember 2021</td>
+                            <td class="d-flex justify-content-center border-0"><div class="status-menunggu text-center">Menunggu</div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </main>
-    <!-- Main Content -->
 
     <!-- Footer -->
     <footer
@@ -232,5 +260,5 @@
       </div>
     </footer>
     <!-- Footer -->
-  </body>
+</body>
 </html>

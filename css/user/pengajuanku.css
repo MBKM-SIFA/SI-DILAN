@@ -1,0 +1,71 @@
+body {
+  background-color: #212529;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+main .card {
+  border-radius: 15px;
+  width: 1100px;
+}
+main .card .card-body {
+  padding: 0;
+  background-color: #848484;
+  border-radius: 15px;
+}
+main .card .card-body table {
+  border-collapse: collapse;
+  border-radius: 15px;
+  overflow: hidden;
+}
+main .card .card-body table thead {
+  background-color: #198754;
+}
+main .card .card-body table thead tr th {
+  border: 0;
+  font-size: 19px;
+  font-weight: 700;
+  color: white;
+  padding: 15px;
+}
+main .card .card-body table tbody tr td .status-diterima {
+  background-color: rgba(25, 135, 84, 0.9);
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: 600;
+  width: 150px;
+  color: white;
+}
+main .card .card-body table tbody tr td .status-ditolak {
+  background-color: #e14d4d;
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: 600;
+  width: 150px;
+  color: white;
+}
+main .card .card-body table tbody tr td .status-menunggu {
+  background-color: #a5a5a5;
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: 600;
+  width: 150px;
+  color: white;
+}
+main .card .card-body table tbody tr th,
+main .card .card-body table tbody tr td {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px;
+  color: white;
+}
