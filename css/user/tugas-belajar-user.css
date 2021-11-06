@@ -127,10 +127,13 @@ main .ajukan .btn {
 .btn-success:focus,
 .btn-success:active {
   background-color: #197e50;
+  border: 0;
 }
 .btn-success {
   background-color: #198754;
+  border: 0;
 }
+
 a,
 a:hover,
 a:active,

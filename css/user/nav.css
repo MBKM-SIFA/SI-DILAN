@@ -48,9 +48,11 @@ nav .main-nav .navbar-collapse ul a {
 .btn-success:focus,
 .btn-success:active {
   background-color: #197e50;
+  border: 0;
 }
 .btn-success {
   background-color: #198754;
+  border: 0;
 }
 footer {
   background-color: #4e4e4e;
