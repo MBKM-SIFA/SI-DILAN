@@ -143,16 +143,21 @@ main .rekomendasi .card .card-body .content .card .card-body h5 {
 
 main .ajukan {
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
+  width: 80%;
+  margin: auto;
 }
 main .ajukan .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 180px;
   background: #198754;
   border-radius: 10px;
   font-size: 18px;
   font-weight: 700;
-  margin-left: 1180px;
+  text-align: center;
 }
 
 .btn-success:hover,
