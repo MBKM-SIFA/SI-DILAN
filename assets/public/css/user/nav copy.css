@@ -1,0 +1,67 @@
+.navbar {
+  font-family: "Montserrat", sans-serif;
+  background-color: #212529;
+  height: 100px;
+  padding: 0 73px;
+  border: 0;
+}
+.navbar .navbar-collapse .active {
+  font-weight: 600 !important;
+  font-size: 25px;
+  color: #198754 !important;
+}
+.title-beranda {
+  font-weight: 700;
+}
+.navbar-brand {
+  font-size: 35px;
+}
+.navbar .navbar-collapse ul a {
+  font-size: 25px;
+  font-weight: 500;
+}
+.navbar .navbar-collapse .dropdown .nav-item {
+  font-size: 20px;
+  font-weight: 500 !important;
+}
+nav .main-nav .navbar-collapse ul a {
+  font-weight: 600 !important;
+  color: white !important;
+}
+.navbar a.active {
+  color: #198754;
+}
+.navbar .navbar-collapse .navbar-nav .dropdown .nav-item.active {
+  color: #198754;
+}
+.nav-item {
+  margin-right: 20px;
+}
+.nav-item:active {
+  color: #198754;
+}
+.navbar-collapse {
+  margin-right: 0px;
+}
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active {
+  background-color: #197e50;
+  border: 0;
+}
+.btn-success {
+  background-color: #198754;
+  border: 0;
+}
+footer {
+  background-color: #4e4e4e;
+  margin-top: 50px;
+}
+a,
+a:hover,
+a:active,
+a:link {
+  text-decoration: none;
+  color: #212529;
+}

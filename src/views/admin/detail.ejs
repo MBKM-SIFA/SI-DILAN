@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <link rel="stylesheet" href="/css/admin/nav.css" />
+         <link rel="stylesheet" href="/css/admin/detail-berkas.css" />
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap" rel="stylesheet">
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.1/umd/popper.min.js" integrity="sha512-8jeQKzUKh/0pqnK24AfqZYxlQ8JdQjl9gGONwGwKbJiEaAPkD3eoIjz3IuX4IrP+dnxkchGUeWdXLazLHin+UQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+         
+         <title>Detail Berkas Izin Belajar</title>    
+     </head>
+  
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+        <div class="title-beranda">
+            <a class="navbar-brand" href="beranda.html">
+            <img src="../../assets/logo.png" alt="" width="70">
+            </a>
+            <a class="navbar-brand" aria-current="page" href="/view/admin/beranda.html" >SI - DILAN</a>
+        </div>
+         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto" >
+                <a href="/view/admin/beranda.html" class="nav-item nav-link">Beranda</a>
+                <a href="/view/admin/informasi-beasiswa.html" class="nav-item nav-link">Informasi Beasiswa</a>
+                <div class="dropdown">
+                    <div class="nav-item nav-link active dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Verifikasi
+                    </div>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <li><a class="dropdown-item" href="/view/admin/izin-belajar.html">Izin Belajar</a></li>
+                      <hr>
+                      <li><a class="dropdown-item" href="/view/admin/tugas-belajar.html">Tugas Belajar</a></li>
+                    </ul>
+                </div>
+                <form class="d-flex">
+                    <button class="btn btn-outline-secondary" style="width: 120px; margin-left: 20px;" type="submit">Logout</button>
+            </form>
+        </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Main Content -->
+    <main>
+        <h5 class="main-title">Detail Pengajuan <%= applications.app_type %> </h5>
+        <hr>
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Data Diri</h5>
+                <br>
+                <form action="" >
+                    <fieldset disabled>
+                        <div class="form-group row">
+                            <label for="title-data-diri" id="title-data-diri" class="col-sm-2 col-form-label">Nama Lengkap</label>
+                            <div class="col-sm-8">
+                                <input type="" class="form-control" id="detail-data-diri" value="<%= applications.name %> ">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="title-data-diri" id="title-data-diri" class="col-sm-2 col-form-label">NIP</label>
+                            <div class="col-sm-8">
+                                <input type="" class="form-control" id="detail-data-diri" value=" <%= applications.nip %> ">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="title-data-diri" id="title-data-diri" class="col-sm-2 col-form-label">Tempat Lahir</label>
+                            <div class="col-sm-8">
+                                <input type="" class="form-control" id="detail-data-diri" value="<%= applications.place_of_birth %>">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="title-data-diri" id="title-data-diri" class="col-sm-2 col-form-label">Tanggal Lahir</label>
+                            <div class="col-sm-8">
+                                <input type="" class="form-control" id="detail-data-diri" value="<%= applications.date_of_birth %>">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="title-data-diri" id="title-data-diri" class="col-sm-2 col-form-label">Nomor Telepon</label>
+                            <div class="col-sm-8">
+                                <input type="" class="form-control" id="detail-data-diri" value="<%= applications.phone %>">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="title-data-diri" id="title-data-diri" class="col-sm-2 col-form-label">Jabatan</label>
+                            <div class="col-sm-8">
+                                <input type="" class="form-control" id="detail-data-diri" value="<%= applications.department %>">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="title-data-diri" id="title-data-diri" class="col-sm-2 col-form-label">Pangkat / Golongan</label>
+                            <div class="col-sm-8">
+                                <input type="" class="form-control" id="detail-data-diri" value="<%= applications.ranks %>">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <br>
+            </div>
+         </div>
+
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Berkas Pendukung</h5>
+                <br>
+                <form action="/admin/verify/<%= applications.app_id %> " method="post">
+                    <% for (let i = 0; i < files.length; i++) { %> 
+                        <div class="form-group row align-items-center ">
+                            <label for="title-data-berkas" id="title-data-berkas" class="col-sm-4 col-form-label"><%= files[i].type %> </label>
+                            <div class="col-sm-6">
+                                <a href="/admin/files/<%= applications.nip %>/<%= applications.app_id %>/<%= files[i].filename %>" target="_blank" rel="noopener noreferrer"><button type="button" id="detail-data-berkas" class="btn btn-outline-secondary col-sm-10" >Pratinjau Berkas</button></a>
+                            </div>
+                            <div class="custom-control custom-switch col-sm-2">
+                                <input type="checkbox" class="custom-control-input" id="<%= files[i].files_id %>" name="valid_file" value="<%= files[i].files_id %>" <%= files[i].status == 'Valid' ? 'checked' : '' %>  >
+                                <label class="custom-control-label" id="customSwitchesSesuai" for="<%= files[i].files_id %>">Sesuai Format</label>
+                            </div>
+                        </div>
+                    <% } %> 
+                <br>
+            </div>
+        </div>
+        
+         <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Status Pengajuan</h5>
+                <br>
+                <div class="form-group row align-items-center">
+                    <label for="title-data-berkas" id="title-data-berkas" class="col-sm-4 col-form-label">Ubah Status Pengajuan</label>
+                    <div class="col-sm-6">
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" style="height: 45px;" name="application_status" required>
+                        <option value="" disabled>Status Pengajuan</option>
+                        <option value="Menunggu" <%= applications.app_status == "Menunggu" ? 'selected' : '' %> >Menunggu</option>
+                        <option value="Diterima">Diterima</option>
+                        <option value="Ditolak">Ditolak</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                      <label for="title-data-berkas" id="title-data-berkas" class="col-sm-4 col-form-label">Pesan Kepada Pengaju</label>
+                      <div class="col-sm-6">
+                        <textarea class="form-control" style="height: 90px;" type="text" placeholder="Masukkan Pesan Pada Pengaju..." name="notifications_message"></textarea>
+                      </div>
+                </div>
+                <div class="form-group d-flex justify-content-center" id="form-confirm">
+                      <button type="reset" class="btn btn-danger modal-link mr-3">Ulangi</button>
+                      <button type="submit" class="btn btn-success modal-link">Simpan</button>
+                </div>
+            </div>
+         </div>
+        </form>
+    </main>
+    <!-- Main Content -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="text-center p-3">
+          © IT Team RSUD Siti Fatimah Kampus Merdeka 2021
+        </div>
+     </footer>
+    <!-- Footer -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </body>
+</html>

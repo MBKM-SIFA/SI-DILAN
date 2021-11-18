@@ -1,0 +1,174 @@
+body {
+  background-color: #212529;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .syarat {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+main .syarat .card {
+  width: 80%;
+  border-radius: 20px;
+  border: 0;
+}
+main .syarat .card .card-header {
+  background-color: #198754;
+  border-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 30px;
+  padding: 15px 30px;
+  color: #ffffff;
+}
+main .syarat .card .card-body {
+  background-color: #848484;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 15px 30px;
+}
+main .syarat .card .card-body p {
+  font-weight: 500;
+  font-size: 20px;
+  color: #ffffff;
+}
+main .pendukung {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+main .pendukung .card {
+  width: 80%;
+  border-radius: 20px;
+  border: 0;
+}
+main .pendukung .card .card-header {
+  background-color: #198754;
+  border-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 30px;
+  padding: 15px 30px;
+  color: #ffffff;
+}
+main .pendukung .card .card-body {
+  background-color: #848484;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 15px 30px;
+}
+main .pendukung .card .card-body .content a img {
+  margin: 0 5px;
+}
+main .rekomendasi {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+main .rekomendasi .card {
+  width: 80%;
+  border-radius: 20px;
+  border: 0;
+  margin-bottom: 40px;
+}
+main .rekomendasi .card .card-header {
+  background-color: #198754;
+  border-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 30px;
+  padding: 15px 30px;
+  color: #ffffff;
+}
+main .rekomendasi .card .card-body {
+  background-color: #848484;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 15px 30px;
+}
+main .rekomendasi .card .card-body p {
+  font-weight: 500;
+  font-size: 18px;
+  color: #ffffff;
+}
+main .rekomendasi .card .card-body .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+main .rekomendasi .card .card-body .content .card {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+main .rekomendasi .card .card-body .content .card .card-body {
+  background-color: #c4c4c4;
+  padding: 5px;
+}
+main .rekomendasi .card .content .card-body .card {
+  border-radius: 10px;
+  background-color: #c4c4c4;
+}
+main .rekomendasi .card .card-body .content .card .card-img-top {
+  background-color: #c4c4c4;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+main .rekomendasi .card .card-body .content .card .card-body h3 {
+  margin-top: 10px;
+  font-size: 23px;
+  font-weight: 700;
+}
+main .rekomendasi .card .card-body .content .card .card-body h5 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-top: -5px;
+  margin-bottom: 20px;
+}
+
+main .ajukan {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+main .ajukan .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  background: #198754;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active {
+  background-color: #197e50;
+}
+.btn-success {
+  background-color: #198754;
+}
+/* 
+font-weight: 600;
+font-size: 17px;
+line-height: 21px; */
