@@ -14,7 +14,7 @@ module.exports = {
         const storage = multer.diskStorage({
             destination : function (req , file, cb){
 
-                const dir = path.resolve(`./assets/private/articles`);
+                const dir = path.resolve(`./assets/public`);
                 const dirExist = fs.existsSync(dir);
 
                 console.log(
@@ -78,25 +78,21 @@ module.exports = {
 
         const query = (
             `INSERT INTO posts (
-                post_type ,
-                title ,
                 link ,
-                photo ,
                 study_program ,
                 open_date ,
                 close_date ,
                 acreditation ,
-                post_date                
+                post_date ,
+                institute
             ) VALUES (
-                '${input.post_type}' ,
-                '${input.title}' ,
                 '${input.link}' ,
-                '' ,
                 '${input.study_program}' ,
                 '${input.open_date}' ,
                 '${input.close_date}' ,
                 '${input.acreditation}' ,
-                '${helper.time.current_date()}'
+                '${helper.time.current_date()}' ,
+                '${input.institute}'
             );`
         );
 
@@ -181,5 +177,23 @@ module.exports = {
                 next();
             }
         );
+    },
+    getPosts : function (req, res, next){
+
+        const query = (
+            `SELECT * FROM posts ORDER BY post_date DESC LIMIT 4;`
+        );
+
+        database.query(
+            query,
+            ( err, rows, fields ) => {
+                if(err)
+                return res.send(err);
+                else{
+                    res.locals.posts = rows;
+                    next();
+                }
+            }
+        )
     }
 }

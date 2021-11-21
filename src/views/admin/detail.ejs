@@ -6,8 +6,8 @@
          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
          <meta http-equiv="X-UA-Compatible" content="IE=edge">
-         <link rel="stylesheet" href="/css/admin/nav.css" />
-         <link rel="stylesheet" href="/css/admin/detail-berkas.css" />
+         <link rel="stylesheet" href="/public/css/admin/nav.css" />
+         <link rel="stylesheet" href="/public/css/admin/detail-berkas.css" />
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
          <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -27,7 +27,7 @@
     <nav class="navbar navbar-expand-lg navbar-light border-bottom">
         <div class="title-beranda">
             <a class="navbar-brand" href="beranda.html">
-            <img src="../../assets/logo.png" alt="" width="70">
+            <img src="/public/logo.png" alt="" width="70">
             </a>
             <a class="navbar-brand" aria-current="page" href="/view/admin/beranda.html" >SI - DILAN</a>
         </div>
@@ -36,21 +36,23 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav ml-auto" >
-                <a href="/view/admin/beranda.html" class="nav-item nav-link">Beranda</a>
-                <a href="/view/admin/informasi-beasiswa.html" class="nav-item nav-link">Informasi Beasiswa</a>
+                <a href="/admin/dashboard" class="nav-item nav-link">Beranda</a>
+                <a href="/posts/home" class="nav-item nav-link">Informasi Beasiswa</a>
                 <div class="dropdown">
                     <div class="nav-item nav-link active dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Verifikasi
                     </div>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <li><a class="dropdown-item" href="/view/admin/izin-belajar.html">Izin Belajar</a></li>
+                      <li><a class="dropdown-item" href="/admin/applications/Izin Belajar">Izin Belajar</a></li>
                       <hr>
-                      <li><a class="dropdown-item" href="/view/admin/tugas-belajar.html">Tugas Belajar</a></li>
+                      <li><a class="dropdown-item" href="/admin/applications/Tugas Belajar">Tugas Belajar</a></li>
                     </ul>
                 </div>
                 <form class="d-flex">
-                    <button class="btn btn-outline-secondary" style="width: 120px; margin-left: 20px;" type="submit">Logout</button>
-            </form>
+                    <a href="/auth/logout">
+                        <button class="btn btn-outline-secondary" style="width: 120px; margin-left: 20px;" type="button">Logout</button>
+                    </a>
+                </form>
         </div>
     </nav>
     <!-- Navbar -->
@@ -118,6 +120,9 @@
                 <h5 class="card-title">Berkas Pendukung</h5>
                 <br>
                 <form action="/admin/verify/<%= applications.app_id %> " method="post">
+                    <% if(files.length == 0){ %> 
+                        <h1>Belum Ada Berkas</h1>
+                    <% } %> 
                     <% for (let i = 0; i < files.length; i++) { %> 
                         <div class="form-group row align-items-center ">
                             <label for="title-data-berkas" id="title-data-berkas" class="col-sm-4 col-form-label"><%= files[i].type %> </label>

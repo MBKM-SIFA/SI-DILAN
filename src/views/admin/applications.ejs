@@ -9,8 +9,8 @@
     />
     <link rel="stylesheet" href="bootstrap-5.1.1-dist\css\bootstrap.min.css" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="/css/admin/nav.css" />
-    <link rel="stylesheet" href="/css/admin/izin-belajar.css" />
+    <link rel="stylesheet" href="/public/css/admin/nav.css" />
+    <link rel="stylesheet" href="/public/css/admin/izin-belajar.css" />
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="bootstrap-5.1.1-dist\js\bootstrap.bundle.min.js"></script>
     <link
@@ -35,7 +35,7 @@
     <nav class="navbar navbar-expand-lg navbar-light border-bottom">
         <div class="title-beranda">
             <a class="navbar-brand" href="beranda.html">
-            <img src="../../assets/logo.png" alt="" width="70">
+            <img src="/public/logo.png" alt="" width="70">
             </a>
             <a class="navbar-brand" aria-current="page" href="/view/admin/beranda.html" >SI - DILAN</a>
         </div>
@@ -44,21 +44,23 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav ml-auto" >
-                <a href="/view/admin/beranda.html" class="nav-item nav-link">Beranda</a>
-                <a href="/view/admin/informasi-beasiswa.html" class="nav-item nav-link">Informasi Beasiswa</a>
+                <a href="/admin/dashboard" class="nav-item nav-link">Beranda</a>
+                <a href="/posts/home" class="nav-item nav-link">Informasi Beasiswa</a>
                 <div class="dropdown">
                     <div class="nav-item nav-link active dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Verifikasi
                     </div>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <li><a class="dropdown-item" href="/view/admin/izin-belajar.html">Izin Belajar</a></li>
+                      <li><a class="dropdown-item" href="/admin/applications/Izin Belajar">Izin Belajar</a></li>
                       <hr>
-                      <li><a class="dropdown-item" href="/view/admin/tugas-belajar.html">Tugas Belajar</a></li>
+                      <li><a class="dropdown-item" href="/admin/applications/Tugas Belajar">Tugas Belajar</a></li>
                     </ul>
                 </div>
                 <form class="d-flex">
-                    <button class="btn btn-outline-secondary" style="width: 120px; margin-left: 20px;" type="submit">Logout</button>
-            </form>
+                    <a href="/auth/logout">
+                        <button class="btn btn-outline-secondary" style="width: 120px; margin-left: 20px;" type="button">Logout</button>
+                    </a>
+                </form>
         </div>
     </nav>
     <!-- Navbar -->

@@ -36,9 +36,7 @@ router.get(
 )
 router.post(
     '/insert',
-    middlewares.articles.storePhoto(),
     middlewares.articles.insert,
-    middlewares.articles.recordsFileName,
     middlewares.response.redirect('/posts/home')
 )
 

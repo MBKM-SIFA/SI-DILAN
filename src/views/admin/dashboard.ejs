@@ -9,8 +9,8 @@
     />
     <link rel="stylesheet" href="bootstrap-5.1.1-dist\css\bootstrap.min.css" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="/css/admin/nav.css" />
-    <link rel="stylesheet" href="/css/admin/beranda.css" />
+    <link rel="stylesheet" href="/public/css/admin/nav.css" />
+    <link rel="stylesheet" href="/public/css/admin/beranda.css" />
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="bootstrap-5.1.1-dist\js\bootstrap.bundle.min.js"></script>
     <link
@@ -35,7 +35,7 @@
     <nav class="navbar navbar-expand-lg navbar-light border-bottom">
         <div class="title-beranda">
             <a class="navbar-brand" href="beranda.html">
-            <img src="../../assets/logo.png" alt="" width="70">
+            <img src="/public/logo.png" alt="" width="70">
             </a>
             <a class="navbar-brand" aria-current="page" href="/view/admin/beranda.html" >SI - DILAN</a>
         </div>
@@ -44,7 +44,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav ml-auto" >
-                <a href="/view/admin/beranda.html" class="nav-item nav-link active">Beranda</a>
+                <a href="#" class="nav-item nav-link active">Beranda</a>
                 <a href="/posts/home" class="nav-item nav-link">Informasi Beasiswa</a>
                 <div class="dropdown">
                     <div class="nav-item nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -57,8 +57,10 @@
                     </ul>
                 </div>
                 <form class="d-flex">
-                    <button class="btn btn-outline-secondary" style="width: 120px; margin-left: 20px;" type="submit">Logout</button>
-            </form>
+                    <a href="/auth/logout">
+                        <button class="btn btn-outline-secondary" style="width: 120px; margin-left: 20px;" type="button">Logout</button>
+                    </a>
+                </form>
         </div>
     </nav>
     <!-- Navbar -->
@@ -71,14 +73,14 @@
                 <br>  
                 <div class="statistik">
                     <div class="statistik-pengguna">
-                        <img src="../../assets/icon13.png" width="130" alt="" />
+                        <img src="/public/icon13.png" width="130" alt="" />
                         <div class="detail-statistika">
                             <h6 id="total-akun" class="counter-count"> <%= totalUsers %> </h6>
                             <h6 id="detail-statistik">Total Akun Terdaftar</h6>
                         </div>
                     </div>
                     <div class="statistik-pengguna">
-                        <img src="../../assets/icon14.png" width="120" alt="" />
+                        <img src="/public/icon14.png" width="120" alt="" />
                         <div class="detail-statistika">
                             <h6 id="total-pengajuan" class="counter-count"> <%= totalApp %>  </h6>
                             <h6 id="detail-statistik-pengajuan">Total Pengajuan Aktif</h6>
@@ -87,14 +89,14 @@
                 </div>        
                 <div class="statistik" style="margin-top: 30px;">
                     <div class="statistik-pengguna">
-                        <img src="../../assets/icon15.png" width="130" alt="" />
+                        <img src="/public/icon15.png" width="130" alt="" />
                         <div class="detail-statistika">
                             <h6 id="total-akun" class="counter-count"> <%= totalAssignments %> </h6>
                             <h6 id="detail-statistik">Pengajuan Tugas Belajar</h6>
                         </div>
                     </div>
                     <div class="statistik-pengguna">
-                        <img src="../../assets/icon16.png" width="120" alt="" />
+                        <img src="/public/icon16.png" width="120" alt="" />
                         <div class="detail-statistika">
                             <h6 id="total-pengajuan" class="counter-count"> <%= totalPermissions %> </h6>
                             <h6 id="detail-statistik-pengajuan">Pengajuan Izin Belajar</h6>
@@ -123,7 +125,7 @@
                             <tr>
                                 <th scope="row"> <%= i+1 %>  </th>
                                 <td> <%= permissions[i].name %>  </td>
-                                <td> <%= permissions[i].app_date %>  </td>
+                                <td> <%= permissions[i].app_date.toISOString().substring(0, 10); %>  </td>
                                 <td> <a href="/admin/detail/<%= permissions[i].app_id %>"> Lihat Detail</a></td>
                                 <td> <%= permissions[i].app_status == 'pending' ? 'Belum diperiksa' : permissions[i].app_status%>  </td>
                             </tr>
@@ -153,7 +155,7 @@
                                 <tr>
                                     <th scope="row"> <%= i+1 %>  </th>
                                     <td> <%= assignments[i].name %>  </td>
-                                    <td> <%= assignments[i].app_date %>  </td>
+                                    <td> <%= assignments[i].app_date.toISOString().substring(0, 10); %>  </td>
                                     <td> <a href="/admin/detail/<%= assignments[i].app_id %>"> Lihat Detail</a></td>
                                     <td> <%= assignments[i].app_status == 'pending' ? 'Belum diperiksa' : assignments[i].app_status%>  </td>
                                 </tr>

@@ -3,7 +3,8 @@ const middleware = {
     response : require('../middlewares/response'),
     permission : require('../middlewares/permission'),
     employee : require('../middlewares/employee'),
-    auth : require('../middlewares/auth')
+    auth : require('../middlewares/auth'),
+    articles : require('../middlewares/articles')
 }
 
 router.use(

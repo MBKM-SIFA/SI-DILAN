@@ -1,0 +1,46 @@
+.navbar {
+  font-family: "Montserrat", sans-serif;
+  background-color: white;
+  height: 100px;
+  padding: 0 73px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 100vh;
+}
+.navbar .navbar-collapse .active {
+  font-weight: 700;
+}
+.title-beranda {
+  font-weight: 700;
+}
+.navbar-brand {
+  font-size: 35px;
+}
+.navbar .navbar-collapse ul a {
+  font-size: 20px;
+  font-weight: 500;
+}
+.navbar .navbar-collapse .dropdown .nav-item {
+  font-size: 20px;
+  font-weight: 500;
+}
+.navbar a.active {
+  border-bottom: 3px solid#198754;
+  font-weight: 700;
+}
+.navbar .navbar-collapse .navbar-nav .dropdown .nav-item.active {
+  border-bottom: 3px solid#198754;
+  font-weight: 700;
+}
+.nav-item {
+  font-weight: bold;
+  margin-right: 20px;
+}
+.nav-item:active {
+  font-weight: bold;
+}
+
+.navbar-collapse {
+  margin-right: 0px;
+}

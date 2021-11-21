@@ -14,9 +14,9 @@ router
         middlewares.employee.check,
         middlewares.response.redirect('/user/home')
     ]
-)
-.get(
-    '/login' , 
+    )
+    .get(
+        '/login' ,
         middlewares.response.render('user/login.ejs')
 )
 .get(

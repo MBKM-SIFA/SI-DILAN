@@ -63,16 +63,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav ml-auto">
-            <a href="/view/user/beranda-user.html" class="nav-item nav-link"
+            <a href="/user/home" class="nav-item nav-link"
               >Beranda</a
             >
-            <a href="/view/user/tugas-belajar.html" class="nav-item nav-link"
+            <a href="/assignment/home" class="nav-item nav-link"
               >Tugas Belajar</a
             >
-            <a href="/view/user/izin-belajar.html" class="nav-item nav-link"
+            <a href="/permission/home" class="nav-item nav-link"
               >Izin Belajar</a
             >
-            <a href="/view/user/pengajuanku.html" class="nav-item nav-link"
+            <a href="/user/applications" class="nav-item nav-link"
               >Pengajuanku</a
             >
           </ul>
@@ -113,7 +113,7 @@
             style="margin-top: 65px; margin-right: -100px"
             aria-labelledby="dropdownMenuButton"
           >
-            <a href="../user/profil-user.html">
+            <a href="/user/employee-data">
               <div
                 class="dropdown-item menu-nav d-flex"
                 style="text-decoration: none"
@@ -122,7 +122,7 @@
                 <span>Profil</span>
               </div>
             </a>
-            <a href="../user/notifikasi.html">
+            <a href="/user/notifications">
               <div
                 class="dropdown-item menu-nav d-flex"
                 style="text-decoration: none"
@@ -131,7 +131,7 @@
                 <span>Notifikasi</span>
               </div>
             </a>
-            <a href="../user/landing-page.html">
+            <a href="/user/logout">
               <div
                 class="dropdown-item menu-nav d-flex"
                 style="text-decoration: none"
@@ -165,34 +165,17 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <% notifications.forEach( notification => { %> 
+                <tr>
                 <th
                   colspan="2"
                   class="notification-active"
-                  style="border-left: solid 20px #198754 !important"
+                  style="border-left: solid <%= notification.status == "opened" ? "0px" : "20px" %> #198754 !important"
                 >
-                  Pengajuan Izin Belajar Diterima
+                  <%= notification.content %> : <%= notification.status %>
                 </th>
               </tr>
-              <tr>
-                <th
-                  colspan="2"
-                  class="notification-non-active"
-                  style="border-left: solid 20px #848484 !important"
-                >
-                  Pengajuan Izin Belajar Anda Ditolak karena Dokumen Berkas
-                  Pernyataan tidak sesuai
-                </th>
-              </tr>
-              <tr>
-                <th
-                  colspan="2"
-                  class="notification-active"
-                  style="border-left: solid 20px #198754 !important"
-                >
-                  Pengajuan Tugas Belajar Anda di Tolak
-                </th>
-              </tr>
+              <% }); %>
             </tbody>
           </table>
         </div>
@@ -224,22 +207,22 @@
                 <b>Navigasi</b>
               </h5>
               <p>
-                <a href="../user/beranda-user.html" class="text-reset"
+                <a href="/user/home" class="text-reset"
                   >Beranda</a
                 >
               </p>
               <p>
-                <a href="../user/tugas-belajar.html" class="text-reset"
+                <a href="/assignment/home" class="text-reset"
                   >Tugas Belajar</a
                 >
               </p>
               <p>
-                <a href="../user/izin-belajar.html" class="text-reset"
+                <a href="/permission/home" class="text-reset"
                   >Izin Belajar</a
                 >
               </p>
               <p>
-                <a href="../user/pengajuanku.html" class="text-reset"
+                <a href="/user/applications" class="text-reset"
                   >Pengajuanku</a
                 >
               </p>

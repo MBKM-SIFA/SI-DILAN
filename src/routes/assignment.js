@@ -3,7 +3,8 @@ const middleware = {
     response : require('../middlewares/response'),
     assignment : require('../middlewares/assignment'),
     employee : require('../middlewares/employee'),
-    auth : require('../middlewares/auth')
+    auth : require('../middlewares/auth'),
+    articles :  require('../middlewares/articles')
 }
 
 router.use(
@@ -18,6 +19,7 @@ router
 )
 .get(
     '/home',
+    middleware.articles.getPosts,
     middleware.response.render('user/tugas-belajar')
 )
 .post(

@@ -68,18 +68,18 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav ml-auto">
-            <a href="/view/user/beranda-user.html" class="nav-item nav-link"
+            <a href="/user/home" class="nav-item nav-link"
               >Beranda</a
             >
             <a
-              href="/view/user/tugas-belajar.html"
+              href="/assignment/home"
               class="nav-item nav-link active"
               >Tugas Belajar</a
             >
-            <a href="/view/user/izin-belajar.html" class="nav-item nav-link"
+            <a href="/permission/home" class="nav-item nav-link"
               >Izin Belajar</a
             >
-            <a href="/view/user/pengajuanku.html" class="nav-item nav-link"
+            <a href="/user/applications" class="nav-item nav-link"
               >Pengajuanku</a
             >
           </ul>
@@ -239,76 +239,28 @@
           </div>
         </div>
       </div>
-
       <div class="rekomendasi">
         <div class="card justify-content-center">
           <h5 class="card-header">Rekomendasi Kami</h5>
           <div class="card-body">
             <div class="content">
-              <a href="https://beasiswalpdp.kemenkeu.go.id/">
-                <div class="card shadow-lg" style="width: 18rem">
-                  <img
-                    class="card-img-top"
-                    src="/public/lpdp.png"
-                    alt="Card image cap"
-                  />
-                  <div class="card-body">
-                    <h4>Beasiswa LPDP</h4>
-                    <h5>S2 - Administrasi Publik</h5>
-                    <h5>Akreditasi A</h5>
-                    <h5>11 Desember - 31 Desember 2022</h5>
+              <% posts.forEach(post => { %>
+                <a href="<%= post.link %>">
+                  <div class="card shadow-lg" style="width: 18rem">
+                    <img
+                      class="card-img-top"
+                      src="/public/<%= post.institute %>.png"
+                      alt="Card image cap"
+                    />
+                    <div class="card-body">
+                      <h4><%= post.institute %></h4>
+                      <h5><%= post.study_program %></h5>
+                      <h5>Akreditasi <%= post.acreditation %></h5>
+                      <h5><%= post.open_date.toISOString().substring(0, 10) %> s/d <%= post.close_date.toISOString().substring(0, 10) %></h5>
+                    </div>
                   </div>
-                </div>
-              </a>
-              <a href="https://beasiswalpdp.kemenkeu.go.id/">
-                <div class="card shadow-lg" style="width: 18rem">
-                  <img
-                    class="card-img-top"
-                    src="/public/lpdp.png"
-                    alt="Card image cap"
-                  />
-                  <div class="card-body">
-                    <h4>Beasiswa LPDP</h4>
-                    <h5>S2 - Ilmu Komputer</h5>
-                    <h5>Akreditasi A</h5>
-                    <h5>11 Desember - 31 Desember 2022</h5>
-                  </div>
-                </div>
-              </a>
-              <a
-                href="http://pusbindiklatren.bappenas.go.id/news-3082-seleksi-program-beasiswa-splitsite-master-program-ssmp-tahun-2022.html"
-              >
-                <div class="card shadow-lg" style="width: 18rem">
-                  <img
-                    class="card-img-top"
-                    src="/public/bappenas.png"
-                    alt="Card image cap"
-                  />
-                  <div class="card-body">
-                    <h4>Bappenas</h4>
-                    <h5>Split-Site Master Program</h5>
-                    <h5>Akreditasi A</h5>
-                    <h5>1 Oktober - 30 November 2021</h5>
-                  </div>
-                </div>
-              </a>
-              <a
-                href="https://www.beasiswapascasarjana.com/2013/06/bantuan-tugas-belajar-s1-s2-s3-kemenkes.html"
-              >
-                <div class="card shadow-lg" style="width: 18rem">
-                  <img
-                    class="card-img-top"
-                    src="/public/kemenkes.png"
-                    alt="Card image cap"
-                  />
-                  <div class="card-body">
-                    <h4>Kemenkes</h4>
-                    <h5>S2 - Keprawatan Umum</h5>
-                    <h5>Akreditasi A</h5>
-                    <h5>11 Desember - 31 Desember 2022</h5>
-                  </div>
-                </div>
-              </a>
+                </a>
+              <% }); %>
             </div>
           </div>
         </div>
@@ -343,22 +295,22 @@
                 <b>Navigasi</b>
               </h5>
               <p>
-                <a href="../user/beranda-user.html" class="text-reset"
+                <a href="/user/home" class="text-reset"
                   >Beranda</a
                 >
               </p>
               <p>
-                <a href="../user/tugas-belajar.html" class="text-reset"
+                <a href="/assignment/home" class="text-reset"
                   >Tugas Belajar</a
                 >
               </p>
               <p>
-                <a href="../user/izin-belajar.html" class="text-reset"
+                <a href="/permission/home" class="text-reset"
                   >Izin Belajar</a
                 >
               </p>
               <p>
-                <a href="../user/pengajuanku.html" class="text-reset"
+                <a href="/user/applications" class="text-reset"
                   >Pengajuanku</a
                 >
               </p>
