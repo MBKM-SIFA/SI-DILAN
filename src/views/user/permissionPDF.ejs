@@ -563,8 +563,8 @@
                 <td class="c8" colspan="1" rowspan="9">
                     <p class="c9"><span
                             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 152.28px; height: 172.23px;"><img
-                                alt="" src="/public/image2.png"
-                                style="width: 152.28px; height: 172.23px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                                alt="" src="/user/photo/<%= employee_data.photo %> "
+                                style="max-width: 152.28px; height: auto; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
                                 title=""></span></p>
                 </td>
                 <td class="c18" colspan="3" rowspan="1">
@@ -579,7 +579,7 @@
                     <p class="c1"><span class="c0">:</span></p>
                 </td>
                 <td class="c16" colspan="1" rowspan="1">
-                    <p class="c1"><span class="c0"><%= applications.app_date  %></span></p>
+                    <p class="c1"><span class="c0"><%= time.dateWithDay(applications.app_date)  %></span></p>
                 </td>
             </tr>
             <tr class="c4">
@@ -671,7 +671,7 @@
                     <p class="c1"><span class="c0">:</span></p>
                 </td>
                 <td class="c16" colspan="1" rowspan="1">
-                    <p class="c1"><span class="c0"> <%= employee_data.date_of_birth %> </span></p>
+                    <p class="c1"><span class="c0"> <%= time.dateOnly(employee_data.date_of_birth) %> </span></p>
                 </td>
             </tr>
             <tr class="c4">
@@ -914,8 +914,8 @@
     <p class="c1 c17"><span class="c2"></span></p>
     <p class="c1 c17"><span class="c2"></span></p>
     <p class="c1 c17"><span class="c2"></span></p>
-    <p class="c1 c12"><span class="c0">Palembang, <%= applications.app_date %> </span></p>
-    <p class="c1 c12"><span class="c0">yang mengajukan,</span></p>
+    <p class="c1 c12" style="text-align: center;"><span class="c0">Palembang, <%= time.dateOnly(applications.app_date) %> </span></p>
+    <p class="c1 c12" style="text-align: center;"><span class="c0">yang mengajukan,</span></p>
     <p class="c1 c12 c17"><span class="c0"></span></p>
     <p class="c1 c12 c17"><span class="c0"></span></p>
     <p class="c1 c12 c17"><span class="c0"></span></p>

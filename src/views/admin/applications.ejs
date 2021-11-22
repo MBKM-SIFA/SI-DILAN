@@ -86,32 +86,11 @@
                             <tr>
                                 <th scope="row"> <%= i+1 %>  </th>
                                 <td> <%= applications[i].name %> </td>
-                                <td> <%= applications[i].app_date %> </td>
+                                <td> <%= time.dateOnly(applications[i].app_date) %> </td>
                                 <td ><a href="/admin/detail/<%= applications[i].app_id %> " id="detail">Lihat Detail</a></td>
                                 <td> <%= applications[i].app_status %> </td>
                             </tr>
                         <% } %>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Muhammad Sholeh</td>
-                            <td>21 Juni 2021</td>
-                            <td ><a href="../admin/detail-berkas-izin-belajar.html" id="detail">Lihat Detail</a></td>
-                            <td>Menunggu</td>
-                        </tr>
-                       <tr>
-                            <th scope="row">2</th>
-                            <td>Muhammad Febriansyah</td>
-                            <td>12 Agustus 2021</td>
-                            <td ><a href="../admin/detail-berkas-izin-belajar.html" id="detail">Lihat Detail</a></td>
-                            <td>Diterima</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Aldin Herdhiansyah</td>
-                            <td>10 Mei 2021</td>
-                            <td ><a href="../admin/detail-berkas-izin-belajar.html" id="detail">Lihat Detail</a></td>
-                            <td>Ditolak</td>
-                        </tr>
                     </tbody>
                 </table>
                 <br>

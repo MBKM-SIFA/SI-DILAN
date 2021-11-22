@@ -131,7 +131,7 @@
                 <span>Notifikasi</span>
               </div>
             </a>
-            <a href="/user/logout">
+            <a href="/auth/logout">
               <div
                 class="dropdown-item menu-nav d-flex"
                 style="text-decoration: none"
@@ -172,7 +172,9 @@
                   class="notification-active"
                   style="border-left: solid <%= notification.status == "opened" ? "0px" : "20px" %> #198754 !important"
                 >
-                  <%= notification.content %> : <%= notification.status %>
+                  <a href="<%= notification.link %> " style="text-decoration: none; color: white;">
+                    <%= notification.content %>
+                  </a>
                 </th>
               </tr>
               <% }); %>

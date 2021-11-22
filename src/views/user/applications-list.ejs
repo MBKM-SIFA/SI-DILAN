@@ -163,7 +163,7 @@
                             <tr>
                                 <th scope="row" class="text-center"><%= i+1 %> </th>
                                 <td> <%= applications[i].app_type %>  </td>
-                                <td class="text-center"> <%= applications[i].app_date.toISOString().substring(0, 10); %>  </td>
+                                <td class="text-center"> <%= time.dateOnly(applications[i].app_date) %>  </td>
                                 <td class="d-flex justify-content-center border-0" style="height: 58.5px; border-bottom: 0.5px solid #dee2e6 !important;"><div class="status-diterima text-center"><%= applications[i].app_status %></div></td>
                                 <td>
                                     <a style="color: white;" href="/<%= (applications[i].app_type == 'Izin Belajar') ? 'permission' : 'assignment' %>/<%= applications[i].app_id %>/<%= applications[i].last_phase %> " >Resume</a> 

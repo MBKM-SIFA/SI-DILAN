@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const helper = {
+    time : require('./src/helper/time')
+};
 
 // Session Configuration
 const session = require('express-session');
@@ -28,6 +31,7 @@ app.listen(process.env.PORT || 3000, () => {
 app.use(
     (req,res,next)=>{
         res.locals.user = req.session.user;
+        res.locals.time = helper.time;
         next();
     }
 )

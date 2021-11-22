@@ -48,7 +48,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark justify-content-between" style="display: <%= employee_data.name ? '' : 'none' %>;" >
       <div class="title-beranda">
         <a class="navbar-brand" href="beranda.html">
-          <img src="../../assets/logo.png" alt="" width="70" />
+          <img src="/public/logo.png" alt="" width="70" />
         </a>
         <a
           class="navbar-brand"
@@ -69,17 +69,17 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav ml-auto">
             <a
-              href="/view/user/beranda-user.html"
+              href="/user/home"
               class="nav-item nav-link"
               >Beranda</a
             >
-            <a href="/view/user/tugas-belajar.html" class="nav-item nav-link"
+            <a href="/assignment/home" class="nav-item nav-link"
               >Tugas Belajar</a
             >
-            <a href="/view/user/izin-belajar.html" class="nav-item nav-link"
+            <a href="/permission/home" class="nav-item nav-link"
               >Izin Belajar</a
             >
-            <a href="/view/user/pengajuanku.html" class="nav-item nav-link"
+            <a href="/user/applications" class="nav-item nav-link"
               >Pengajuanku</a
             >
           </ul>
@@ -87,14 +87,14 @@
       </div>
       <div class="account-nav">
         <div class="dropdown dropleft">
-          <img
+          <!-- <img
             src="../../assets/pp.png"
             id="dropdownMenuButton"
             data-toggle="dropdown"
             aria-haspopup="true"
             aria-expanded="false"
             style="max-width: 100"
-          />
+          /> -->
           <svg
             width="34"
             height="35"
@@ -287,7 +287,7 @@
                       id="birth-date"
                       required
                       name="date_of_birth"
-                      value="<%= employee_data.date_of_birth || '' %>"
+                      value="<%= employee_data.date_of_birth ? employee_data.date_of_birth.toISOString().substring(0, 10) : '' %>"
                     />
                   </div>
                 </div>
@@ -759,22 +759,22 @@
                 <b>Navigasi</b>
               </h5>
               <p>
-                <a href="../user/beranda-user.html" class="text-reset"
+                <a href="/user/home" class="text-reset"
                   >Beranda</a
                 >
               </p>
               <p>
-                <a href="../user/tugas-belajar.html" class="text-reset"
+                <a href="/assignment/home" class="text-reset"
                   >Tugas Belajar</a
                 >
               </p>
               <p>
-                <a href="../user/izin-belajar.html" class="text-reset"
+                <a href="/permission/home" class="text-reset"
                   >Izin Belajar</a
                 >
               </p>
               <p>
-                <a href="../user/pengajuanku.html" class="text-reset"
+                <a href="/user/applications" class="text-reset"
                   >Pengajuanku</a
                 >
               </p>
