@@ -252,11 +252,8 @@
                       src="/public/<%= post.institute %>.png"
                       alt="Card image cap"
                     />
-                    <div class="card-body">
+                    <div class="card-body" style="text-align: center;">
                       <h4><%= post.institute %></h4>
-                      <h5><%= post.study_program %></h5>
-                      <h5>Akreditasi <%= post.acreditation %></h5>
-                      <h5><%= post.open_date.toISOString().substring(0, 10) %> s/d <%= post.close_date.toISOString().substring(0, 10) %></h5>
                     </div>
                   </div>
                 </a>

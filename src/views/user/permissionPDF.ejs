@@ -662,7 +662,7 @@
             </tr>
             <tr class="c4">
                 <td class="c8" colspan="1" rowspan="1">
-                    <p class="c9"><span class="c30">No. <%= applications.app_id %> [Pengajuan]</span></p>
+                    <p class="c9"><span class="c30"><%= time.letterNumber(applications.app_id) %>/IBEL/RSUDSF/<%= time.currentYear() %> </span></p>
                 </td>
                 <td class="c13" colspan="1" rowspan="1">
                     <p class="c1"><span class="c0">Tanggal Lahir</span></p>
@@ -676,7 +676,9 @@
             </tr>
             <tr class="c4">
                 <td class="c8" colspan="1" rowspan="1">
-                    <p class="c9"><span class="c30">IBEL-</span></p>
+                    <p class="c9"><span class="c30">
+                        <!-- IBEL- -->
+                    </span></p>
                 </td>
                 <td class="c13" colspan="1" rowspan="1">
                     <p class="c1"><span class="c0">Agama</span></p>

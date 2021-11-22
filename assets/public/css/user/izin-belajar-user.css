@@ -77,6 +77,7 @@ main .rekomendasi {
   display: flex;
   justify-content: center;
   margin-top: 70px;
+  font-size: 18px;
 }
 main .rekomendasi .card {
   width: 80%;
@@ -135,7 +136,7 @@ main .rekomendasi .card .card-body .content .card .card-body h3 {
   font-weight: 700;
 }
 main .rekomendasi .card .card-body .content .card .card-body h5 {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
   margin-top: -5px;
   margin-bottom: 20px;

@@ -63,5 +63,30 @@ module.exports = {
             month[date.getMonth()] + ' ' +
             date.getFullYear() + ' '
         );
+    },
+    currentYear : function () {
+        return new Date().getFullYear();
+    },
+    letterNumber : function ( number ) {
+
+        
+        const addition =  3 - number.toString().length;
+
+        console.log(
+            'addition : ' + addition +
+            'number : ' + number +
+            'number.length : ' + number.length
+        );
+
+        let result = '';
+
+        for (let i = 0; i < addition; i++) {
+            result += '0';
+        }
+
+        result += number;
+
+        console.log('result : ' + result);
+        return result;
     }
 }
