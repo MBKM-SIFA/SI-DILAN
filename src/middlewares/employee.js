@@ -28,6 +28,10 @@ module.exports = {
         if( helper.object.isEmpty(user) )
         return res.send('Missing some input.');
 
+        console.log(
+            user
+        );
+
         if(!helper.object.sameStructure(user,columns.employee_data))
         return res.send('Wrong Format.');
 

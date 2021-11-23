@@ -244,20 +244,59 @@
           <h5 class="card-header">Rekomendasi Kami</h5>
           <div class="card-body">
             <div class="content">
-              <% posts.forEach(post => { %>
-                <a href="<%= post.link %>">
+
+                <a href="https://www.lpdp.kemenkeu.go.id">
                   <div class="card shadow-lg" style="width: 18rem">
                     <img
                       class="card-img-top"
-                      src="/public/<%= post.institute %>.png"
+                      src="/public/lpdp.png"
                       alt="Card image cap"
                     />
                     <div class="card-body" style="text-align: center;">
-                      <h4><%= post.institute %></h4>
+                      <h4>LPDP</h4>
                     </div>
                   </div>
                 </a>
-              <% }); %>
+
+                <a href="https://www.bappenas.go.id/id/">
+                  <div class="card shadow-lg" style="width: 18rem">
+                    <img
+                      class="card-img-top"
+                      src="/public/bappenas.png"
+                      alt="Card image cap"
+                    />
+                    <div class="card-body" style="text-align: center;">
+                      <h4>Bappenas</h4>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="https://www.kemkes.go.id">
+                  <div class="card shadow-lg" style="width: 18rem">
+                    <img
+                      class="card-img-top"
+                      src="/public/kemenkes.png"
+                      alt="Card image cap"
+                    />
+                    <div class="card-body" style="text-align: center;">
+                      <h4>Kemenkes</h4>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="http://bkd.sumselprov.go.id">
+                  <div class="card shadow-lg" style="width: 18rem">
+                    <img
+                      class="card-img-top"
+                      src="/public/BKD.png"
+                      alt="Card image cap"
+                    />
+                    <div class="card-body" style="text-align: center;">
+                      <h4>BKD</h4>
+                    </div>
+                  </div>
+                </a>
+
             </div>
           </div>
         </div>

@@ -10,8 +10,12 @@ module.exports = {
     sameStructure : function( object , requirements ){
         let result = true;
         requirements.forEach( key => {
-            if(object[key] == null)
-            result = false;
+            if(object[key] == null){
+                console.log(
+                    key + 'IS NULL'
+                );
+                result = false;
+            }
         });
 
         return result;

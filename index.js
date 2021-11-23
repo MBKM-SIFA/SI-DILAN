@@ -25,9 +25,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Listener
-app.listen(process.env.PORT || 3000, () => {
-    console.log(`Listening to ${process.env.PORT | '3000'} ...`);
-})
+app.listen(process.env.PORT || 3000, '0.0.0.0');
 app.use(
     (req,res,next)=>{
         res.locals.user = req.session.user;
