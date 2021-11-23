@@ -156,7 +156,7 @@
                                     <th scope="row"> <%= i+1 %>  </th>
                                     <td> <%= assignments[i].name %>  </td>
                                     <td> <%= assignments[i].app_date.toISOString().substring(0, 10); %>  </td>
-                                    <td> <a href="/admin/detail/<%= assignments[i].app_id %>"> Lihat Detail</a></td>
+                                    <td> <a href="/admin/detail/<%= assignments[i].app_id%>"> Lihat Detail</a></td>
                                     <td> <%= assignments[i].app_status == 'pending' ? 'Belum diperiksa' : assignments[i].app_status%>  </td>
                                 </tr>
                                 <% } %> 
@@ -172,7 +172,7 @@
     <!-- Footer -->
     <footer>
         <div class="text-center p-3">
-          © IT Team RSUD Siti Fatimah Kampus Merdeka 2021
+            RSUD SITI FATIMAH PROVINSI SUMATERA SELATAN 2021
         </div>
      </footer>
     <!-- Footer -->
