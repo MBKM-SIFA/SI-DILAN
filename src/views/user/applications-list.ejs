@@ -46,7 +46,7 @@
         <a
           class="navbar-brand"
           aria-current="page"
-          href="/view/user/beranda-user.html"
+          href="/user/home"
           >SI - DILAN</a
         >
       </div>
@@ -168,7 +168,11 @@
                                   class="status-<%= applications[i].app_status.toLowerCase() %> text-center"
                                   ><%= applications[i].app_status %></div></td>
                                 <td>
-                                    <a style="color: white;" href="/<%= (applications[i].app_type == 'Izin Belajar') ? 'permission' : 'assignment' %>/<%= applications[i].app_id %>/<%= applications[i].last_phase %> " >Perbarui</a> 
+                                    <a 
+                                    style="color: white; <%= applications[i].app_status == 'Diterima' ? ' pointer-events: none ' : '' %> " 
+                                    href="/<%= (applications[i].app_type == 'Izin Belajar') ? 'permission' : 'assignment' %>/<%= applications[i].app_id %>/<%= applications[i].last_phase %> " >
+                                    <%= applications[i].app_status == 'Diterima' ? ' ' : 'Perbarui' %>
+                                  </a> 
                                 </td>
                             </tr>
                         <% } %> 

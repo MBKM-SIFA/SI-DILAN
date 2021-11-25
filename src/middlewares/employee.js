@@ -64,6 +64,11 @@ module.exports = {
     }, // Move to Authentication
     update : function(req, res, next){
         const user =  req.body;
+        const photoQuery = (
+            user.photo == undefined
+            ? ''
+            : `photo='${user.photo}',`
+        );
 
         if( helper.object.isEmpty(user) )
         return res.send('Missing some input.');
@@ -86,7 +91,7 @@ module.exports = {
         specialization='${user.specialization}',
         last_education='${user.last_education}',
         department='${user.department}',
-        photo='${user.photo}',
+        ${photoQuery}
         ranks='${user.ranks}'
         WHERE nip='${req.session.user.nip}'`;
         

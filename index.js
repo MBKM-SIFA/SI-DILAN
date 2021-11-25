@@ -35,6 +35,12 @@ app.use(
 )
 
 // Setting Routes.
+app.get(
+    '/',
+    (req, res, next) => {
+        res.render('user/landing-page')
+    }
+)
 app.use(
     '/user' ,
     require('./src/routes/user')
@@ -63,4 +69,4 @@ app.use(
     '/public' ,
     express.static('./assets/public')
 )
-app.use((req,res) => res.send('NOT FOUND'))
+app.use((req,res) => res.redirect('/public/notFound.html'))

@@ -15,7 +15,6 @@ router
 )
 .get(
     '/home',[
-        middlewares.auth.restrict,
         middlewares.response.render('user/beranda.ejs')
     ]
     )

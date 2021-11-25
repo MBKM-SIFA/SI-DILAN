@@ -7,6 +7,11 @@ const middleware = {
     articles : require('../middlewares/articles')
 }
 
+router.get(
+    '/home',
+    middleware.response.render('user/izin-belajar')
+)
+
 router.use(
     '/',
     middleware.auth.restrict
@@ -21,10 +26,6 @@ router
     '/apply',
     middleware.permission.insert,
     middleware.response.render('user/permission-phase2')
-)
-.get(
-    '/home',
-    middleware.response.render('user/izin-belajar')
 )
 .get(
     '/proceed/:app_id',

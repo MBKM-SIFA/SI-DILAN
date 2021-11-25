@@ -7,6 +7,11 @@ const middleware = {
     articles :  require('../middlewares/articles')
 }
 
+router.get(
+    '/home',
+    middleware.response.render('user/tugas-belajar')
+)
+
 router.use(
     '/',
     middleware.auth.restrict
@@ -16,11 +21,6 @@ router
 .get(
     '/apply',
     middleware.response.render('user/apply-assignment')
-)
-.get(
-    '/home',
-    middleware.articles.getPosts,
-    middleware.response.render('user/tugas-belajar')
 )
 .post(
     '/apply',

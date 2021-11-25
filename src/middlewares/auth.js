@@ -16,9 +16,11 @@ module.exports = {
         database.query(
             `SELECT * FROM user WHERE nip=${nip}`,
             (errors, user, fields) => {
+
+                console.log(user);
                 
-                if(!user)
-                return res.send("User Not Found")
+                if(user == undefined || user.length == 0)
+                return res.redirect('/auth/login');
                 
                 hash({ password : passwords, salt : user[0].salt },function (err, pass , salt, hash){
                     if(err) return res.send(err);
@@ -30,7 +32,7 @@ module.exports = {
                         next();
                     });
                     else
-                    res.send('Unauthorized : Password Not Match')
+                    return res.redirect('/auth/login');
                 })
             })
 
