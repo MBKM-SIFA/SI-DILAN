@@ -89,9 +89,13 @@ main .rekomendasi .card .card-body .content .card {
 main .rekomendasi .card .card-body .content .card .card-body {
   background-color: #c4c4c4;
 }
-main .rekomendasi .card .content .card-body .card {
+main .rekomendasi .card .content .card-body a .card {
   border-radius: 10px;
   background-color: #c4c4c4;
+}
+main .rekomendasi .card .card-body .content a .card {
+  max-width: 288px;
+  width: 100% !important;
 }
 main .rekomendasi .card .card-body .content .card .card-img-top {
   background-color: #c4c4c4;

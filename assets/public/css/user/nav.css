@@ -25,6 +25,13 @@
   font-size: 20px;
   font-weight: 500;
 }
+.navbar .account-nav .dropdown img {
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 0px 0px;
+}
 .navbar a.active {
   border-bottom: 3px solid#198754;
   font-weight: 700;
@@ -45,7 +52,7 @@
   margin-right: 0px;
 }
 
-footer{
+footer {
   margin-top: 20px;
   background-color: #4e4e4e;
 }

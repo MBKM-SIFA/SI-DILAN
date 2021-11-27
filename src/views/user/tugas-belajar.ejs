@@ -50,10 +50,7 @@
         <a class="navbar-brand" href="/user/home">
           <img src="/public/logo.png" alt="" width="70" />
         </a>
-        <a
-          class="navbar-brand"
-          aria-current="page"
-          href="/view/user/beranda-user.html"
+        <a class="navbar-brand" aria-current="page" href="/user/home"
           >SI - DILAN</a
         >
       </div>
@@ -75,15 +72,15 @@
             <a href="/permission/home" class="nav-item nav-link"
               >Izin Belajar</a
             >
-            <% const loggedIn=(user !=undefined); %>
-            <% if (loggedIn) { %>
-              <a href="/user/applications" class="nav-item nav-link">Pengajuanku</a>
-              <% } %>
-
-        </ul>
+            <% const loggedIn=(user !=undefined); %> <% if (loggedIn) { %>
+            <a href="/user/applications" class="nav-item nav-link"
+              >Pengajuanku</a
+            >
+            <% } %>
+          </ul>
+        </div>
       </div>
-    </div>
-    <% if (loggedIn) { %>
+      <% if (loggedIn) { %>
       <div class="account-nav">
         <div class="dropdown dropleft">
           <!-- <img
@@ -94,28 +91,54 @@
               aria-expanded="false"
               style="max-width: 25px"
             /> -->
-          <svg width="34" height="35" viewBox="0 0 34 35" fill="none" xmlns="http://www.w3.org/2000/svg"
-            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <path d="M7.08317 12.3959L16.9998 22.6042L26.9165 12.3959" stroke="white" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round" />
+          <svg
+            width="34"
+            height="35"
+            viewBox="0 0 34 35"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <path
+              d="M7.08317 12.3959L16.9998 22.6042L26.9165 12.3959"
+              stroke="white"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
           </svg>
 
-          <div class="dropdown-menu" style="margin-top: 65px; margin-right: -100px"
-            aria-labelledby="dropdownMenuButton">
+          <div
+            class="dropdown-menu"
+            style="margin-top: 65px; margin-right: -100px"
+            aria-labelledby="dropdownMenuButton"
+          >
             <a href="/user/employee-data">
-              <div class="dropdown-item menu-nav d-flex" style="text-decoration: none">
+              <div
+                class="dropdown-item menu-nav d-flex"
+                style="text-decoration: none"
+              >
                 <span class="material-icons-round mr-2"> account_circle </span>
                 <span>Profil</span>
               </div>
             </a>
             <a href="/user/notifications">
-              <div class="dropdown-item menu-nav d-flex" style="text-decoration: none">
+              <div
+                class="dropdown-item menu-nav d-flex"
+                style="text-decoration: none"
+              >
                 <span class="material-icons-round mr-2"> notifications </span>
                 <span>Notifikasi</span>
               </div>
             </a>
             <a href="/auth/logout">
-              <div class="dropdown-item menu-nav d-flex" style="text-decoration: none">
+              <div
+                class="dropdown-item menu-nav d-flex"
+                style="text-decoration: none"
+              >
                 <span class="material-icons-round ml-1 mr-1"> logout </span>
                 <span>Keluar</span>
               </div>
@@ -124,14 +147,19 @@
         </div>
       </div>
       <% }else{ %>
-        <div class="account-nav">
-          <a href="/auth/login">
-            <button type="submit" id="log" class="btn btn-success" style="width: 150px">
-              Masuk
-            </button>
-          </a>
-        </div>
-        <% } %>
+      <div class="account-nav">
+        <a href="/auth/login">
+          <button
+            type="submit"
+            id="log"
+            class="btn btn-success"
+            style="width: 150px"
+          >
+            Masuk
+          </button>
+        </a>
+      </div>
+      <% } %>
     </nav>
     <!-- Navbar -->
 
@@ -193,7 +221,7 @@
           <h5 class="card-header">Syarat Usia dan Golongan Pengajuan</h5>
           <div class="card-body">
             <p class="card-text ml-3">
-              1.&nbsp;Maksimal Usia 30 Tahun Untuk Program Akademi.
+              1.&nbsp;&nbsp;Maksimal Usia 30 Tahun Untuk Program Akademi.
             </p>
             <p class="card-text ml-3">
               2.&nbsp;Maksimal Usia 35 Tahun Untuk Program Strata-1.
@@ -225,64 +253,78 @@
         <div class="card justify-content-center">
           <h5 class="card-header">Rekomendasi Kami</h5>
           <div class="card-body">
-            <div class="content">
-
-                <a href="https://www.lpdp.kemenkeu.go.id/in/page/PNSTNIPOLRI2021" target="_blank" rel="noopener noreferrer">
-                  <div class="card shadow-lg" style="width: 18rem">
-                    <img
-                      class="card-img-top"
-                      src="/public/lpdp.png"
-                      alt="Card image cap"
-                    />
-                    <div class="card-body" style="text-align: center;">
-                      <h4> BEASISWA LPDP</h4>
-                      <h5>Lembaga Pengelola Dana Pendidikan</h5>
-                    </div>
+            <div class="content row">
+              <a
+                href="https://www.lpdp.kemenkeu.go.id/in/page/PNSTNIPOLRI2021"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="card shadow-lg" style="width: 18rem">
+                  <img
+                    class="card-img-top"
+                    src="/public/lpdp.png"
+                    alt="Card image cap"
+                  />
+                  <div class="card-body" style="text-align: center">
+                    <h4>BEASISWA LPDP</h4>
+                    <h5>Lembaga Pengelola Dana Pendidikan</h5>
                   </div>
-                </a>
+                </div>
+              </a>
 
-                <a href="http://pusbindiklatren.bappenas.go.id/beasiswa-gelar.html" target="_blank" rel="noopener noreferrer">
-                  <div class="card shadow-lg" style="width: 18rem">
-                    <img
-                      class="card-img-top"
-                      src="/public/bappenas.png"
-                      alt="Card image cap"
-                    />
-                    <div class="card-body" style="text-align: center;">
-                      <h4>PPN / BAPPENAS</h4>
-                      <h5>Badan Perencanaan Pembangunan Nasional</h5>
-                    </div>
+              <a
+                href="http://pusbindiklatren.bappenas.go.id/beasiswa-gelar.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="card shadow-lg" style="width: 18rem">
+                  <img
+                    class="card-img-top"
+                    src="/public/bappenas.png"
+                    alt="Card image cap"
+                  />
+                  <div class="card-body" style="text-align: center">
+                    <h4>PPN / BAPPENAS</h4>
+                    <h5>Badan Perencanaan Pembangunan Nasional</h5>
                   </div>
-                </a>
+                </div>
+              </a>
 
-                <a href="http://tubel.bppsdmk.kemkes.go.id/index.php/public/membership/registrasi-info/" target="_blank" rel="noopener noreferrer">
-                  <div class="card shadow-lg" style="width: 18rem">
-                    <img
-                      class="card-img-top"
-                      src="/public/kemenkes.png"
-                      alt="Card image cap"
-                    />
-                    <div class="card-body" style="text-align: center;">
-                      <h4>KEMENKES RI</h4>
-                      <h5>Kementerian Kesehatan Republik Indonesia</h5>
-                    </div>
+              <a
+                href="http://tubel.bppsdmk.kemkes.go.id/index.php/public/membership/registrasi-info/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="card shadow-lg" style="width: 18rem">
+                  <img
+                    class="card-img-top"
+                    src="/public/kemenkes.png"
+                    alt="Card image cap"
+                  />
+                  <div class="card-body" style="text-align: center">
+                    <h4>KEMENKES RI</h4>
+                    <h5>Kementerian Kesehatan Republik Indonesia</h5>
                   </div>
-                </a>
+                </div>
+              </a>
 
-                <a href="http://bkd.sumselprov.go.id/" target="_blank" rel="noopener noreferrer">
-                  <div class="card shadow-lg" style="width: 18rem">
-                    <img
-                      class="card-img-top"
-                      src="/public/BKD.png"
-                      alt="Card image cap"
-                    />
-                    <div class="card-body" style="text-align: center;">
-                      <h4>BKD SUMSEL</h4>
-                      <h5>Badan Kepegawaian Daerah Sumatera Selatan</h5>
-                    </div>
+              <a
+                href="http://bkd.sumselprov.go.id/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="card shadow-lg" style="width: 18rem">
+                  <img
+                    class="card-img-top"
+                    src="/public/BKD.png"
+                    alt="Card image cap"
+                  />
+                  <div class="card-body" style="text-align: center">
+                    <h4>BKD SUMSEL</h4>
+                    <h5>Badan Kepegawaian Daerah Sumatera Selatan</h5>
                   </div>
-                </a>
-
+                </div>
+              </a>
             </div>
           </div>
         </div>

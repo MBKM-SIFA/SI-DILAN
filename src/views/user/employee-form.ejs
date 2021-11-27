@@ -47,13 +47,13 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark justify-content-between" style="display: <%= employee_data.name ? '' : 'none' %>;" >
       <div class="title-beranda">
-        <a class="navbar-brand" href="beranda.html">
+        <a class="navbar-brand" href="/user/home">
           <img src="/public/logo.png" alt="" width="70" />
         </a>
         <a
           class="navbar-brand"
           aria-current="page"
-          href="/view/user/beranda-user.html"
+          href="/user/home"
           >SI - DILAN</a
         >
       </div>
@@ -87,14 +87,13 @@
       </div>
       <div class="account-nav">
         <div class="dropdown dropleft">
-          <!-- <img
-            src="../../assets/pp.png"
+          <img
+            src="<%= employee_data.photo ? `/user/photo/${employee_data.photo}` : '/public/profile.png' %> "
             id="dropdownMenuButton"
             data-toggle="dropdown"
             aria-haspopup="true"
             aria-expanded="false"
-            style="max-width: 100"
-          /> -->
+          />
           <svg
             width="34"
             height="35"
@@ -154,8 +153,8 @@
     <!-- Navbar -->
 
     <!-- Main Content -->
-    <main style="padding-bottom: <%= employee_data.name ? '0' : '20px' %>;">
-      <div class="left mr-5">
+    <main class="row" style="padding-bottom: <%= employee_data.name ? '0' : '20px' %>;">
+      <div class="left d-flex flex-column">
         <div class="profil">
           <div class="card shadow-lg border-0" style="width: 18rem">
             <div class="card-body">
@@ -164,13 +163,12 @@
               src="<%= employee_data.photo ? `/user/photo/${employee_data.photo}` : '/public/profile.png' %> "
               alt="Card image cap"
               style="
-                border-top-left-radius: 15px;
-                border-top-right-radius: 15px;
+                border-radius: 15px;
               "
             />
             </div>
           </div>
-          <div class="save-data mt-4" style="width: 86%;">
+          <div class="save-data mt-4 d-flex justify-content-center" style="width:56%;">
             <form action="/user/<%= employee_data.name ? 'update' : 'post' %>-employee-data" method="post" enctype="multipart/form-data">
               <div class="input-group mb-3">
                 <div class="custom-file">
@@ -178,15 +176,15 @@
                   <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                 </div>
               </div>
-              <!-- <button type="submit" class="btn btn-success" style="width: 100%;">
-                Ubah Foto
-              </button> -->
-            <!-- </form> -->
+          </div>
+          <div class="inform">
+            <small>* Ukuran Pas Foto : 400 x 600 px</small>
+            <small>* Pas Foto Formal Latar Belakang Berwarna Merah</small>
+            <small>* Ukuran Maksimal File 2MB</small>
           </div>
         </div>
       </div>
-
-      <div class="right">
+      <div class="right d-flex flex-column">
         <div class="data-pribadi">
           <div class="card justify-content-center border-0">
             <h4 class="card-header">Data Pribadi</h4>
@@ -832,5 +830,11 @@
       </div>
     </footer>
     <!-- Footer -->
+    <script type="application/javascript">
+        $('input[type="file"]').change(function(e){
+            var fileName = e.target.files[0].name;
+            $('.custom-file-label').html(fileName);
+        });
+    </script>
   </body>
 </html>

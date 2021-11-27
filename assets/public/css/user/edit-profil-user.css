@@ -13,7 +13,8 @@ main {
   margin-top: 20px;
 }
 main .left {
-  width: 20%;
+  width: 30%;
+  padding: 0px 20px;
 }
 main .left .profil {
   display: flex;
@@ -31,8 +32,15 @@ main .left .profil .save-data .input-group {
   display: flex;
   align-items: center;
 }
+main .left .profil .inform {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 56%;
+}
 main .left .profil .card {
-  border-radius: 15px;
+  border-radius: 20px;
   background-color: #c4c4c4;
 }
 main .left .profil .card .card-body {
@@ -94,4 +102,13 @@ main .right .data-pribadi .edit .btn-success {
   width: 170px;
   height: 40px;
   border-radius: 8px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+input:-webkit-autofill {
+  -webkit-text-fill-color: white !important;
 }
