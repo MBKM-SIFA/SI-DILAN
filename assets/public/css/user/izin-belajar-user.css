@@ -72,6 +72,8 @@ main .pendukung .card .card-body {
 }
 main .pendukung .card .card-body .content a img {
   margin: 0 5px;
+  max-width: 238px;
+  width: 100%;
 }
 main .rekomendasi {
   display: flex;
@@ -169,7 +171,19 @@ main .ajukan .btn {
 .btn-success {
   background-color: #198754;
 }
-/* 
-font-weight: 600;
-font-size: 17px;
-line-height: 21px; */
+
+@media only screen and (max-width: 430px) {
+  main .pendukung .card .card-body .content {
+    margin: 0px !important;
+  }
+  main .rekomendasi .card .card-body .content {
+    padding: 10px;
+  }
+  main .rekomendasi .card .card-body .content a {
+    display: flex;
+    justify-content: center;
+  }
+  main .rekomendasi .card .card-body .content a .card.recomm {
+    width: 274px;
+  }
+}

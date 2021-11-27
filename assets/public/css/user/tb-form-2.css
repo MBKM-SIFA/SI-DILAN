@@ -424,6 +424,8 @@ main .card .card-header {
   }
   .cd-horizontal-timeline .timeline {
     width: 100%;
+
+    margin-top: 30px !important;
   }
   .cd-horizontal-timeline ol,
   .cd-horizontal-timeline ul {

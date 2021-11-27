@@ -146,64 +146,38 @@
     </nav>
     <!-- Navbar -->
     <main>
-        <div class="card border-0 shadow-sm">
-            <div class="card-body">
-                <table class="table table-responsive-lg border-0">
-                    <thead>
-                        <tr>
-                        <th scope="col" class="text-center">No</th>
-                        <th scope="col" style="width: 300px;">Jenis Pengajuan</th>
-                        <th scope="col" class="text-center">Waktu Pengajuan</th>
-                        <th scope="col" class="text-center border-bottom">Status Pengajuan</th>
-                        <th scope="col" class="text-center border-bottom">Opsi</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                        <% for (let i = 0; i < applications.length; i++) 
-                          {
-                            if(i != applications.length-1){  %>
-                            <tr>
-                                <th scope="row" class="text-center"><%= i+1 %> </th>
-                                <td> <%= applications[i].app_type %>  </td>
-                                <td class="text-center"> <%= time.dateOnly(applications[i].app_date) %>  </td>
-                                <td class="d-flex justify-content-center border-0" style="height: 58.5px; border-bottom: 0.5px solid #dee2e6 !important;"><div 
-                                  class="status-<%= applications[i].app_status.toLowerCase() %> text-center"
-                                  ><%= applications[i].app_status %></div></td>
-                                <td>
-                                    <a 
-                                    style="color: white; <%= applications[i].app_status == 'Diterima' ? ' pointer-events: none ' : '' %> " 
-                                    href="/<%= (applications[i].app_type == 'Izin Belajar') ? 'permission' : 'assignment' %>/<%= applications[i].app_id %>/<%= applications[i].last_phase %> " >
-                                    <%= applications[i].app_status == 'Diterima' ? ' ' : 'Perbarui' %>
-                                  </a> 
-                                </td>
-                            </tr>
-                            <% } 
-                            else {%> 
-                              <tr>
-                                <th scope="row" class="text-center"><%= i+1 %> </th>
-                                <td> <%= applications[i].app_type %>  </td>
-                                <td class="text-center"> <%= time.dateOnly(applications[i].app_date) %>  </td>
-                                <td class="d-flex justify-content-center border-0"><div 
-                                  class="status-<%= applications[i].app_status.toLowerCase() %> text-center"
-                                  ><%= applications[i].app_status %></div></td>
-                                <td>
-                                    <a 
-                                    style="color: white; <%= applications[i].app_status == 'Diterima' ? ' pointer-events: none ' : '' %> " 
-                                    href="/<%= (applications[i].app_type == 'Izin Belajar') ? 'permission' : 'assignment' %>/<%= applications[i].app_id %>/<%= applications[i].last_phase %> " >
-                                    <%= applications[i].app_status == 'Diterima' ? ' ' : 'Perbarui' %>
-                                  </a> 
-                                </td>
-                            </tr>
-                             <% } %> 
-                        <% } %> 
-                    </tbody>
-                </table>
-            </div>
-        </div>
+      <table class="table table-responsive border-0" >
+        <thead class="border-0">
+          <tr>
+            <th class="text-center border-0 align-middle">No</th>
+            <th class="text-center border-0">Jenis Pengajuan</th>
+            <th class="text-center border-0">Waktu Pengajuan</th>
+            <th class="text-center border-0">Status Pengajuan</th>
+            <th class="text-center border-0 align-middle">Opsi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for (let i = 0; i < applications.length; i++) { %>
+              <tr>
+                  <th scope="row" class="text-center align-middle"><%= i+1 %> </th>
+                  <td class="text-center align-middle"> <%= applications[i].app_type %>  </td>
+                  <td class="text-center align-middle"> <%= time.dateOnly(applications[i].app_date) %>  </td>
+                  <td class="text-center align-middle"><div class="status-<%= applications[i].app_status.toLowerCase() %> text-center"><%= applications[i].app_status %></div></td>
+                  <td class="text-center align-middle">
+                     <a 
+                        style="color: white; <%= applications[i].app_status == 'Diterima' ? ' pointer-events: none ' : '' %> " 
+                        href="/<%= (applications[i].app_type == 'Izin Belajar') ? 'permission' : 'assignment' %>/<%= applications[i].app_id %>/<%= applications[i].last_phase %> " >
+                        <%= applications[i].app_status == 'Diterima' ? ' ' : 'Perbarui' %>
+                      </a>
+                  </td>
+              </tr>
+          <% } %> 
+        </tbody>
+      </table>
     </main>
 
     <!-- Footer -->
-    <footer class="text-center text-lg-start text-muted" 
+    <footer class="text-center text-lg-start text-muted overflow-hidden" 
     style="background-color: #4e4e4e"
     >
       <section>
@@ -278,5 +252,5 @@
       </div>
     </footer>
     <!-- Footer -->
-</body>
+  </body>
 </html>
