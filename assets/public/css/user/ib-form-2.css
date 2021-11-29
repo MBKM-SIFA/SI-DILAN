@@ -42,6 +42,14 @@ main .container .row .col-lg-12 .pendukung .card .card-body {
 main .container .row .col-lg-12 .pendukung .card .card-body .content a img {
   margin: 0 5px;
 }
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active {
+  background-color: #197e50;
+}
+.btn-success {
+  background-color: #198754;
+}
 .cd-horizontal-timeline ol,
 .cd-horizontal-timeline ul {
   list-style: none;

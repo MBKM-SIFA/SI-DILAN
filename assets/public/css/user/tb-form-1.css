@@ -93,6 +93,14 @@ main .card .card-header {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active {
+  background-color: #197e50;
+}
+.btn-success {
+  background-color: #198754;
+}
 .cd-horizontal-timeline ol,
 .cd-horizontal-timeline ul {
   list-style: none;
@@ -530,4 +538,13 @@ input:-webkit-autofill:active {
 }
 input:-webkit-autofill {
   -webkit-text-fill-color: white !important;
+}
+
+@media only screen and (max-width: 991px) {
+  .cd-horizontal-timeline .events-wrapper {
+    position: relative;
+    height: 100%;
+    margin: 0 40px;
+    overflow: auto;
+  }
 }

@@ -187,3 +187,28 @@ main .ajukan .btn {
     width: 274px;
   }
 }
+@media only screen and (max-width: 414px) {
+  main .rekomendasi .card .card-body .content a .card.recomm .card-body h5 {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 362px) {
+  main .rekomendasi .card .card-body .content .card .card-body h3 {
+    font-size: 16px;
+  }
+  main .rekomendasi .card .card-body .content .card .card-body h5 {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 332px) {
+  main .rekomendasi .card .card-body .content .card .card-body h3 {
+    font-size: 14px;
+  }
+  main .rekomendasi .card .card-body .content .card .card-body h5 {
+    font-size: 12px;
+  }
+  main .rekomendasi .card .card-body .content a .card.recomm .card-body h5 {
+    text-align: center;
+  }
+}

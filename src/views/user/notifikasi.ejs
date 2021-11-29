@@ -149,7 +149,7 @@
     <main>
       <div class="card border-0 shadow-sm">
         <div class="card-body">
-          <table class="table table-responsive-lg border-0">
+          <table class="table table-responsive-lg border-0 " style="border-style: hidden;">
             <thead>
               <tr class="d-flex align-items-center">
                 <th scope="col" style="width: 800px; height: 74px; background-color: #198754; border-top-left-radius: 15px;" class="text-left align-items-center d-flex not">
@@ -171,7 +171,7 @@
                 <th
                   colspan="2"
                   class="notification-active"
-                  style="border-left: solid <%= notification.status == "opened" ? "0px" : "20px" %> #198754 !important"
+                  style="border-left: solid <%= notification.status == "opened" ? "0px" : "10px" %> #198754 !important"
                 >
                   <a href="<%= notification.link %> " style="text-decoration: none; color: white;">
                     <%= notification.content %>
@@ -186,7 +186,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="text-center text-lg-start text-muted" 
+    <footer class="text-center text-lg-start text-muted overflow-hidden" 
       style="background-color: #4e4e4e"
     >
       <section>

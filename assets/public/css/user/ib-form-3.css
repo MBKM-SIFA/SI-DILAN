@@ -25,7 +25,6 @@ main .container .row .col-lg-12 .card .card-body .form-group .col-sm-9 input {
   padding: 8px;
   border-radius: 5px;
 }
-
 main .container .row .col-lg-12 .card .card-body .form-group .col-sm-8 input,
 main
   .container
@@ -94,6 +93,14 @@ main .card .card-header {
   color: white;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active {
+  background-color: #197e50;
+}
+.btn-success {
+  background-color: #198754;
 }
 .cd-horizontal-timeline ol,
 .cd-horizontal-timeline ul {

@@ -18,6 +18,7 @@ main .card {
   border-radius: 15px;
   max-width: 1050px;
   width: 100%;
+  margin: 0px 50px !important;
 }
 main .card .card-body {
   padding: 0;
