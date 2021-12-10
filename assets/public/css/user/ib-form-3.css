@@ -101,6 +101,9 @@ main .card .card-header {
 }
 .btn-success {
   background-color: #198754;
+  border-color: rgba(0, 0, 0, 0) !important;
+  font-weight: 600;
+  font-size: 15px;
 }
 .cd-horizontal-timeline ol,
 .cd-horizontal-timeline ul {
