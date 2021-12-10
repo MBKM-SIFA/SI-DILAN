@@ -19,7 +19,7 @@ module.exports = {
     );
   },
   insert: function (req, res, next) {
-    const user = req.body;
+    let user = req.body;
 
     if (helper.object.isEmpty(user)) return res.send("Missing some input.");
 
@@ -28,24 +28,26 @@ module.exports = {
     if (!helper.object.sameStructure(user, columns.employee_data))
       return res.send("Wrong Format.");
 
+    user = helper.object.escape(user);
+
     database.query(
       `INSERT INTO employee_data VALUES(
                 '${req.session.user.nip}' 
-                ,'${user.name}' 
-                ,'${user.nik}' 
-                ,'${user.gender}' 
-                ,'${user.place_of_birth}' 
-                ,'${user.date_of_birth}' 
-                ,'${user.religion}' 
-                ,'${user.phone}' 
-                ,'${user.email}' 
-                ,'${user.age}' 
+                ,${user.name} 
+                ,${user.nik} 
+                ,${user.gender} 
+                ,${user.place_of_birth}
+                ,${user.date_of_birth} 
+                ,${user.religion}
+                ,${user.phone}
+                ,${user.email} 
+                ,${user.age} 
                 ,'Pegawai Negeri Sipil' 
-                ,'${user.specialization}' 
-                ,'${user.last_education}' 
-                ,'${user.department}' 
-                ,'${user.ranks}',
-                '${user.photo}'
+                ,${user.specialization} 
+                ,${user.last_education} 
+                ,${user.department} 
+                ,${user.ranks}
+                ,${user.photo}
             )`,
       (errors, results, fields) => {
         if (errors) return res.send(errors);
@@ -54,31 +56,33 @@ module.exports = {
     );
   }, // Move to Authentication
   update: function (req, res, next) {
-    const user = req.body;
-    const photoQuery = user.photo == undefined ? "" : `photo='${user.photo}',`;
+    let user = req.body;
+    const photoQuery = user.photo == undefined ? "" : `photo=${database.escape(user.photo)},`;
 
     if (helper.object.isEmpty(user)) return res.send("Missing some input.");
 
     if (!helper.object.sameStructure(user, columns.employee_data))
       return res.send(user);
 
+    user = helper.object.escape(user);
+
     let query = `UPDATE employee_data 
         SET 
-        name='${user.name}',
-        nik='${user.nik}',
-        gender='${user.gender}',
-        place_of_birth='${user.place_of_birth}',
-        date_of_birth='${user.date_of_birth}',
-        religion='${user.religion}',
-        phone='${user.phone}',
-        email='${user.email}',
-        age='${user.age}',
-        profession_status='${user.profession_status}',
-        specialization='${user.specialization}',
-        last_education='${user.last_education}',
-        department='${user.department}',
+        name=${user.name},
+        nik=${user.nik},
+        gender=${user.gender},
+        place_of_birth=${user.place_of_birth},
+        date_of_birth=${user.date_of_birth},
+        religion=${user.religion},
+        phone=${user.phone},
+        email=${user.email},
+        age=${user.age},
+        profession_status=${user.profession_status},
+        specialization=${user.specialization},
+        last_education=${user.last_education},
+        department=${user.department},
         ${photoQuery}
-        ranks='${user.ranks}'
+        ranks=${user.ranks}
         WHERE nip='${req.session.user.nip}'`;
 
     database.query(query, (err, rows, fields) => {

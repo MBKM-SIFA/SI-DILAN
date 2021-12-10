@@ -8,6 +8,7 @@ const { columns } = require('../../config/config');
 const path = require('path');
 const fs = require('fs');
 const multer = require('multer');
+const object = require('../helper/object');
 
 module.exports = {
     getAll : function(req, res, next){
@@ -25,13 +26,15 @@ module.exports = {
     },
     insert : function(req, res, next){
               
-        const input = req.body;
+        let input = req.body;
       
         if( helper.object.isEmpty(input) )
         return res.send('Missing some input.');
 
         if(!helper.object.sameStructure(input,columns.permission))
         return res.send('Wrong Format.');
+
+        input = object.escape(input);
 
         database.query(
             `INSERT INTO applications (
@@ -55,15 +58,15 @@ module.exports = {
                 'Menunggu' ,
                 'Tugas Belajar' ,
                 '${helper.time.current_date()}',
-                '${input.institution_name}',
-                '${input.acreditation}',
-                '${input.institution_address}',
-                '${input.institution_phone_number}',
-                '${input.education_level}',
-                '${input.study_program}',
-                '${input.major}',
-                '${input.year_of_study}',
-                '${input.link}'
+                ${input.institution_name},
+                ${input.acreditation},
+                ${input.institution_address},
+                ${input.institution_phone_number},
+                ${input.education_level},
+                ${input.study_program},
+                ${input.major},
+                ${input.year_of_study},
+                ${input.link}
             )`, 
             (errors, results, fields) => {
                 if(errors)
@@ -77,10 +80,10 @@ module.exports = {
         )
     },
     getById : function(req, res, next){
-        const app_id =  req.params.app_id;
+        const app_id =  database.escape(req.params.app_id);
 
         database.query(
-            `SELECT * FROM applications WHERE nip='${req.session.user.nip}' AND app_id='${app_id}'`, 
+            `SELECT * FROM applications WHERE nip='${req.session.user.nip}' AND app_id=${app_id}`, 
             (errors, results, fields) => {
                 if(errors)
                 return res.send(errors);

@@ -3,11 +3,12 @@ const hash = require('pbkdf2-password')(
     require(`${__dirname}/../../config/config.js`).option
 );
 const path = require('path');
+const object = require('../helper/object');
 
 module.exports = {
     login : function (req, res, next){
 
-        const nip = req.body.nip;
+        const nip = object.escape(req.body.nip);
         const passwords = req.body.passwords;
 
         if (nip=="" | passwords=="")

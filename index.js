@@ -70,3 +70,8 @@ app.use(
     express.static('./assets/public')
 )
 app.use((req,res) => res.redirect('/public/notFound.html'))
+app.use(function (err, req, res, next) {
+    if (err.code === 'LIMIT_FILE_SIZE') {
+      return res.redirect('back');
+    }
+})

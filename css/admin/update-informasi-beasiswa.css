@@ -1,0 +1,88 @@
+body {
+  background-color: #f9f9f9;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .card {
+  width: 70%;
+  padding: 30px;
+  border-radius: 20px;
+  margin-top: 40px;
+}
+main .card .card-body .card-title {
+  font-weight: 700;
+  font-size: 28px;
+  text-align: center;
+}
+main .card .card-body .table {
+  text-align: center;
+}
+main .card .card-body hr {
+  width: 80%;
+}
+main .card .card-body h6 {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+main .card .card-body form {
+  width: 75%;
+}
+main .card .card-body .form-beasiswa {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .card .card-body .form-beasiswa form label {
+  font-weight: 600;
+  margin-left: 10px;
+}
+#form-confirm {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 40px;
+}
+#form-confirm .btn {
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 120px;
+}
+.form-control:focus {
+  border-color: #198754;
+  box-shadow: 0px 1px 1px rgba(25, 135, 84, 0.075) inset,
+    0px 0px 8px rgba(35, 216, 131, 0.3);
+}
+.form-control,
+select {
+  border-right: 4px solid #198754 !important;
+}
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active {
+  background-color: #197e50;
+}
+.btn-success {
+  background-color: #198754;
+}
+footer {
+  background-color: white;
+  font-weight: 600;
+  border-top: 1px solid rgba(221, 221, 221, 0.8);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  margin-top: 40px;
+}

@@ -1,0 +1,118 @@
+body {
+  background-color: #212529;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+main {
+  text-align: center;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .card {
+  width: 50%;
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  background-color: #212529 !important;
+}
+main .main-title {
+  font-weight: 700;
+  font-size: 35px;
+  margin-top: 50px;
+  text-align: center;
+}
+main .card .card-body img {
+  width: 150px;
+}
+main .card .card-body .card-title {
+  color: white;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 45px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+main .card .card-body .form-login form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .card {
+  width: 580px;
+}
+main .card .card-body .form-login form input {
+  width: 90%;
+}
+i {
+  position: absolute;
+  right: 15px;
+  top: 8px;
+  color: #ffffff;
+}
+main .card .card-body .form-login form small {
+  font-size: 12px !important;
+}
+main .card .card-body .form-login form small a {
+  color: #197e50 !important;
+}
+a:link {
+  color: inherit;
+}
+a:visited {
+  color: inherit;
+}
+a:hover {
+  color: inherit;
+}
+a:active {
+  color: inherit;
+}
+.btn-success {
+  margin-top: 25px;
+  justify-content: center;
+  text-align: center;
+  border: 0;
+  background-color: #198754;
+  border-radius: 5px;
+  width: 350px;
+  height: 40px;
+}
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active {
+  background-color: #197e50;
+}
+
+#xpassword {
+  margin-top: 20px;
+  position: relative;
+  width: 90%;
+}
+#emailHelp {
+  color: white;
+  font-size: 14px !important;
+}
+
+button {
+  background-color: #198754 !important;
+  border: none !important;
+  margin-top: 25px;
+  width: 90%;
+}
+
+input {
+  height: 40px;
+  background-color: transparent;
+  border: 0.5px solid #ffffff;
+  box-sizing: border-box;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}

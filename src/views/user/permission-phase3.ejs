@@ -466,70 +466,65 @@
             </div>
           </div>
           <div class="edit d-flex justify-content-end mt-4">
-            <a
+            <button
+              type="button"
               class="btn btn-success"
               data-toggle="modal"
-              href="#ignismyModal"
-              style="
-                font-weight: 600;
-                width: 170px;
-                height: 40px;
-                border-radius: 8px;
-                color: white;
-              "
-              >Simpan</a
+              data-target="#notifikasiModal"
+              class="btn btn-success"
+              id="submitButton"
             >
-            <div class="modal fade" id="ignismyModal" role="dialog">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="submit" class="close">
-                      <span>×</span>
-                    </button>
-                  </div>
+              Simpan
+            </button>
+          </div>
 
-                  <div
-                    class="
-                      modal-body
-                      d-flex
-                      align-items-center
-                      justify-content-center
-                    "
+          <!-- Modal Notifications -->
+          <div
+            class="modal fade"
+            id="notifikasiModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="ModalTitle">
+                    PERINGATAN / KONFIRMASI
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
                   >
-                    <div
-                      class="
-                        thank-you-pop
-                        d-flex
-                        flex-column
-                        align-items-center
-                        justify-content-center
-                      "
-                    >
-                      <img
-                        src="http://goactionstations.co.uk/wp-content/uploads/2017/03/Green-Round-Tick.png"
-                        alt=""
-                      />
-                      <h1 class="mt-3"><b>Terima Kasih!</b></h1>
-                      <p class="text-center">
-                        Data Anda Sudah Kami Terima! <br />
-                        Silahkan Konfirmasi Pengajuan Anda Melaui <br />
-                        <b
-                          >Narahubung
-                          <a
-                            href="https://wa.me/+6282184678527"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            +6282184678527 (Intan)</a
-                          ></b
-                        >
-                      </p>
-                    </div>
-                  </div>
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" id="ModalBody">
+                  Pastikan Data Yang Anda Masukkan Sudah Benar!
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button
+                    type="submit"
+                    class="btn btn-success"
+                    onclick="return VerifyUploadSize()"
+                  >
+                    Save changes
+                  </button>
                 </div>
               </div>
             </div>
           </div>
+          <!-- Modal Notifications -->
         </div>
       </main>
     </form>
@@ -604,5 +599,28 @@
       </div>
     </footer>
     <!-- Footer -->
+    <script>
+      function VerifyUploadSize() {
+        const fileInput = document.querySelectorAll("input[type='file']");
+        var MaxSizeInBytes = 2097152;
+
+        for (let i = 0; i < fileInput.length; i++) {
+          var fld = fileInput[i];
+          if (
+            fld.files &&
+            fld.files.length == 1 &&
+            fld.files[0].size > MaxSizeInBytes
+          ) {
+            alert(
+              "The file size must be no more than " +
+                parseInt(MaxSizeInBytes / 1024 / 1024) +
+                "MB"
+            );
+            return false;
+          }
+          return true;
+        }
+      }
+    </script>
   </body>
 </html>
