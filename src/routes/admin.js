@@ -24,23 +24,27 @@ route.get(
 
 route.get(
     '/applications/:app_type',
+    middlewares.admin.restrict,
     middlewares.admin.applications,
     middlewares.response.render('admin/applications')
-)
-
-route.get(
-    '/detail/:app_id',
-    middlewares.admin.applicationsDetail ,
-    middlewares.response.render('admin/detail')
-)
-
-route.get(
+    )
+    
+    route.get(
+        '/detail/:app_id',
+        middlewares.admin.restrict,
+        middlewares.admin.applicationsDetail ,
+        middlewares.response.render('admin/detail')
+        )
+        
+    route.get(
     '/files/:nip/:app_id/:file_name',
+    middlewares.admin.restrict,
     middlewares.admin.getFiles
-)
-
-route.post(
+    )
+    
+    route.post(
     '/verify/:app_id',
+    middlewares.admin.restrict,
     middlewares.admin.applicationsDetail ,
     middlewares.admin.verify
 )

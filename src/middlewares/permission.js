@@ -33,13 +33,15 @@ module.exports = {
     },
     insert : function(req, res, next){
               
-        const input = req.body;
+        let input = req.body;
       
         if( helper.object.isEmpty(input) )
         return res.send('Missing some input.');
 
         if(!helper.object.sameStructure(input,columns.permission))
         return res.send('Wrong Format.');
+
+        input = helper.object.escape(input);
 
         database.query(
             `INSERT INTO applications (
@@ -62,14 +64,14 @@ module.exports = {
                 'Menunggu' ,
                 'Izin Belajar' ,
                 '${helper.time.current_date()}',
-                '${input.institution_name}',
-                '${input.acreditation}',
-                '${input.institution_address}',
-                '${input.institution_phone_number}',
-                '${input.education_level}',
-                '${input.study_program}',
-                '${input.major}',
-                '${input.year_of_study}'
+                ${input.institution_name},
+                ${input.acreditation},
+                ${input.institution_address},
+                ${input.institution_phone_number},
+                ${input.education_level},
+                ${input.study_program},
+                ${input.major},
+                ${input.year_of_study}
             )`, 
             (errors, results, fields) => {
                 if(errors)
@@ -83,10 +85,10 @@ module.exports = {
         )
     },
     getById : function(req, res, next){
-        const app_id =  req.params.app_id;
+        const app_id =  database.escape(req.params.app_id);
 
         database.query(
-            `SELECT * FROM applications WHERE nip='${req.session.user.nip}' AND app_id='${app_id}'`, 
+            `SELECT * FROM applications WHERE nip='${req.session.user.nip}' AND app_id=${app_id}`, 
             (errors, results, fields) => {
                 if(errors)
                 return res.send(errors);
@@ -104,7 +106,7 @@ module.exports = {
         const app_id = req.params.app_id;
 
         database.query(
-            `UPDATE applications SET last_phase=3 WHERE app_id='${app_id}'`, 
+            `UPDATE applications SET last_phase=3 WHERE app_id=${database.escape(app_id)}`, 
             (errors, results, fields) => {
                 if(errors)
                 return res.send(errors);
@@ -162,7 +164,7 @@ module.exports = {
             }
         })
 
-        const upload = multer({storage : storage});      
+        const upload = multer({storage : storage, limits : { fileSize : 2097152}});      
         const final = upload.fields([
             { name : 'KTP' , maxCount : 1},
             { name : 'Ijazah' , maxCount : 1},

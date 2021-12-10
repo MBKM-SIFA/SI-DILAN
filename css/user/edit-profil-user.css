@@ -1,0 +1,97 @@
+body {
+  background-color: #212529;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+}
+main .left {
+  width: 20%;
+}
+main .left .profil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  flex-direction: column;
+}
+main .left .profil .save-data {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+main .left .profil .save-data .input-group {
+  display: flex;
+  align-items: center;
+}
+main .left .profil .card {
+  border-radius: 15px;
+  background-color: #c4c4c4;
+}
+main .left .profil .card .card-body {
+  padding: 0 !important;
+}
+main .left .profil .card .card-body h4 {
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 33px;
+}
+main .right {
+  width: 70%;
+}
+main .right .data-pribadi {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+main .right .data-pribadi .card {
+  width: 90%;
+  border-radius: 15px;
+  background-color: #9a9a9a;
+  color: white;
+  margin: 20px 0;
+}
+main .right .data-pribadi .card .card-header {
+  font-weight: 700;
+  background-color: #198754;
+  color: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+main .right .data-pribadi .card .form-group label {
+  font-size: 20px;
+  font-weight: 500;
+}
+main .right .data-pribadi .card .form-group .col-sm-9 input {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  border: 1px rgba (255, 255, 255, 0.5);
+  padding: 8px;
+  border-radius: 5px;
+  width: 90%;
+}
+main .right .data-pribadi .card .form-group .col-sm-9 .form-control {
+  background-color: rgba(40, 167, 69, 0);
+}
+main .right .data-pribadi .card .form-group .col-sm-9 .form-control:focus {
+  border: 1px solid #198754;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+main .right .data-pribadi .edit {
+  width: 90%;
+  margin-top: 15px;
+}
+main .right .data-pribadi .edit .btn-success {
+  font-weight: 600;
+  width: 170px;
+  height: 40px;
+  border-radius: 8px;
+}

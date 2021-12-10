@@ -477,6 +477,7 @@
                 border-radius: 8px;
                 color: white;
               "
+              id="submitButton"
               >Simpan</a
             >
             <div class="modal fade" id="ignismyModal" role="dialog">
@@ -604,5 +605,20 @@
       </div>
     </footer>
     <!-- Footer -->
+    <script>
+        const submitButton = document.getElementById('submitButton');
+        submitButton.addEventListener('click' , () => {
+          const fileInput = document.querySelectorAll("input[type='file']");
+          console.log(fileInput);
+          for (let i = 0; i < fileInput.length; i++) {
+            console.log(fileInput[i].files.size);
+          }
+          // fileInput.forEach( file => {
+          //   console.log(file.size);
+          //   if(file.size > 2097152)
+          //   alert('Ukuran File Melebihi 2MB');
+          // });
+        })
+    </script>
   </body>
 </html>

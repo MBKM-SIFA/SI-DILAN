@@ -35,10 +35,10 @@ module.exports = {
     ],
   },
   database: {
-    host: "127.0.0.1", // process.env.DBhost, // localhost
-    user: "root", // process.env.DBusername,
-    password: "", // process.env.DBpassword,
-    database: "sidilan", //process.env.DBname,
+    host: process.env.DBhost, 
+    user: process.env.DBusername,
+    password: process.env.DBpassword,
+    database: process.env.DBname,
     multipleStatements: true,
   },
 };

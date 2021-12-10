@@ -1,3 +1,5 @@
+const connection = require('../../src/helper/database');
+
 module.exports = {
     isEmpty : function( x ){
         let result = false;
@@ -26,5 +28,13 @@ module.exports = {
             x[key] = y[key]
         });
         return x;
+    },
+    escape : function( input ){
+        Object.keys(input).forEach (
+            key => {
+                input[key] = connection.escape(input[key])
+            }
+        );
+        return input;
     }
 }

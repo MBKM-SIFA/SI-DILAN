@@ -1,0 +1,104 @@
+body {
+  background-color: #f9f9f9;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .card {
+  width: 70%;
+  padding: 30px;
+  border-radius: 20px;
+  margin-top: 40px;
+}
+main .card .card-body .card-title {
+  font-weight: 700;
+  font-size: 28px;
+  text-align: left;
+  margin-left: 20px;
+}
+main .card .card-body .table {
+  text-align: center;
+}
+main .card .card-body hr {
+  width: 100%;
+}
+main .card .card-body h6 {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+.table-striped > tbody > tr:nth-child(2n + 1) > td,
+.table-striped > tbody > tr:nth-child(2n + 1) > th {
+  background-color: rgb(250, 250, 250);
+}
+.card .card-body .table a {
+  color: inherit;
+  text-decoration: underline;
+}
+#icon-support {
+  width: 100px;
+}
+main .card .card-body .statistik {
+  display: flex;
+  flex-direction: row;
+}
+main .card .card-body .statistik .statistik-pengguna {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid #198754;
+  border-radius: 20px;
+  padding: 20px;
+  width: 500px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+main .card .card-body .statistik .statistik-pengguna .detail-statistika {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  text-align: left;
+  margin-left: 10px;
+}
+
+#total-akun {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: left;
+}
+#detail-statistik {
+  font-weight: 600;
+  font-size: 20px;
+  text-align: left;
+}
+#total-pengajuan {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: left;
+}
+#detail-statistik-pengajuan {
+  font-weight: 600;
+  font-size: 20px;
+  text-align: left;
+}
+a:hover {
+  color: inherit;
+}
+footer {
+  background-color: white;
+  font-weight: 600;
+  border-top: solid 1px rgb(221, 221, 221);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  margin-top: 40px;
+}

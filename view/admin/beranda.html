@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="bootstrap-5.1.1-dist\css\bootstrap.min.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="/css/admin/nav.css" />
+    <link rel="stylesheet" href="/css/admin/beranda.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="bootstrap-5.1.1-dist\js\bootstrap.bundle.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.1/umd/popper.min.js"
+      integrity="sha512-8jeQKzUKh/0pqnK24AfqZYxlQ8JdQjl9gGONwGwKbJiEaAPkD3eoIjz3IuX4IrP+dnxkchGUeWdXLazLHin+UQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="bootstrap-5.1.1-dist\js\bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Beranda</title>
+  </head>
+  
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+        <div class="title-beranda">
+            <a class="navbar-brand" href="beranda.html">
+            <img src="../../assets/logo.png" alt="" width="70">
+            </a>
+            <a class="navbar-brand" aria-current="page" href="/view/admin/beranda.html" >SI - DILAN</a>
+        </div>
+         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto" >
+                <a href="/view/admin/beranda.html" class="nav-item nav-link active">Beranda</a>
+                <a href="/view/admin/informasi-beasiswa.html" class="nav-item nav-link">Informasi Beasiswa</a>
+                <div class="dropdown">
+                    <div class="nav-item nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Verifikasi
+                    </div>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <li><a class="dropdown-item" href="/view/admin/izin-belajar.html">Izin Belajar</a></li>
+                      <hr>
+                      <li><a class="dropdown-item" href="/view/admin/tugas-belajar.html">Tugas Belajar</a></li>
+                    </ul>
+                </div>
+                <form class="d-flex">
+                    <button class="btn btn-outline-secondary" style="width: 120px; margin-left: 20px;" type="submit">Logout</button>
+            </form>
+        </div>
+    </nav>
+    <!-- Navbar -->
+    
+    <!-- Main Content -->
+    <main>
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Detail Statistik Pengguna </h5>
+                <br>  
+                <div class="statistik">
+                    <div class="statistik-pengguna">
+                        <img src="../../assets/icon13.png" width="130" alt="" />
+                        <div class="detail-statistika">
+                            <h6 id="total-akun" class="counter-count">809</h6>
+                            <h6 id="detail-statistik">Total Akun Terdaftar</h6>
+                        </div>
+                    </div>
+                    <div class="statistik-pengguna">
+                        <img src="../../assets/icon14.png" width="120" alt="" />
+                        <div class="detail-statistika">
+                            <h6 id="total-pengajuan" class="counter-count">224</h6>
+                            <h6 id="detail-statistik-pengajuan">Total Pengajuan Aktif</h6>
+                        </div>
+                    </div>
+                </div>        
+                <div class="statistik" style="margin-top: 30px;">
+                    <div class="statistik-pengguna">
+                        <img src="../../assets/icon15.png" width="130" alt="" />
+                        <div class="detail-statistika">
+                            <h6 id="total-akun" class="counter-count">122</h6>
+                            <h6 id="detail-statistik">Pengajuan Tugas Belajar</h6>
+                        </div>
+                    </div>
+                    <div class="statistik-pengguna">
+                        <img src="../../assets/icon16.png" width="120" alt="" />
+                        <div class="detail-statistika">
+                            <h6 id="total-pengajuan" class="counter-count">102</h6>
+                            <h6 id="detail-statistik-pengajuan">Pengajuan Izin Belajar</h6>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+        </div>
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Pengajuan Izin Belajar Terbaru</h5>
+                <br>
+                <table class="table table-responsive-lg table-striped">
+                    <thead>
+                        <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Nama Lengkap</th>
+                        <th scope="col">Tanggal Pengajuan</th>
+                        <th scope="col">Detail Berkas</th>
+                        <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark Zuckberg</td>
+                            <td>11 Oktober 2021</td>
+                            <td> <a href="../admin/detail-berkas-izin-belajar.html"> Lihat Detail</a></td>
+                            <td>Diterima</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Mark Zuckberg</td>
+                            <td>11 Oktober 2021</td>
+                            <td> <a href="../admin/detail-berkas-izin-belajar.html"> Lihat Detail</a></td>
+                            <td>Menunggu</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Mark Zuckberg</td>
+                            <td>11 Oktober 2021</td>
+                            <td> <a href="../admin/detail-berkas-izin-belajar.html"> Lihat Detail</a></td>
+                            <td>Ditolak</td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Pengajuan Tugas Belajar Terbaru</h5>
+                <br>
+                <table class="table table-responsive-lg table-striped">
+                    <thead>
+                        <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Nama Lengkap</th>
+                        <th scope="col">Tanggal Pengajuan</th>
+                        <th scope="col">Detail Berkas</th>
+                        <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark Zuckberg</td>
+                            <td>11 Oktober 2021</td>
+                            <td> <a href="../admin/detail-berkas-tugas-belajar.html"> Lihat Detail</a></td>
+                            <td>Diterima</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Mark Zuckberg</td>
+                            <td>11 Oktober 2021</td>
+                            <td> <a href="../admin/detail-berkas-tugas-belajar.html"> Lihat Detail</a></td>
+                            <td>Menunggu</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Mark Zuckberg</td>
+                            <td>11 Oktober 2021</td>
+                            <td> <a href="../admin/detail-berkas-tugas-belajar.html"> Lihat Detail</a></td>
+                            <td>Ditolak</td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <!-- Main Content -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="text-center p-3">
+          © IT Team RSUD Siti Fatimah Kampus Merdeka 2021
+        </div>
+     </footer>
+    <!-- Footer -->
+    <script src="../../js/counter.js"></script>
+  </body>
+</html>
